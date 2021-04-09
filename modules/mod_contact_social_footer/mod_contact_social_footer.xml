@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+        type="module"
+        version="3"
+        client="site"
+        method="upgrade">
+    <name>mod_contact_social_footer</name>
+    <author>Wanderson Alves</author>
+    <creationDate>26/03/2018</creationDate>
+    <copyright>Copyright (C) - 2018 - Sdrummond Soluções em Tecnologia. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>wanderson@sdrummond.com.br</authorEmail>
+    <authorUrl>www.sdrummond.com.br</authorUrl>
+    <version>1.0.0</version>
+    <description>MOD_CONTACT_SOCIAL_FOOTER_XML_DESCRIPTION</description>
+    <files>
+        <filename module="mod_contact_social_footer">mod_contact_social_footer.php</filename>
+        <folder>tmpl</folder>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <filename>mod_contact_social_footer.xml</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="logo"
+                       type="media"
+                       label="LOGO_LABEL"
+                />
+                <field
+                        name="phone"
+                        type="text"
+                        label="PHONE_LABEL"
+                />
+                <field
+                        name="email"
+                        type="text"
+                        label="EMAIL_LABEL"
+                />
+                <field
+                        name="facebook"
+                        type="text"
+                        label="FACEBOOK_LABEL"
+                />
+                <field
+                        name="youtube"
+                        type="text"
+                        label="YOUTUBE_LABEL"
+                />
+                <field
+                        name="instagram"
+                        type="text"
+                        label="INSTAGRAM_LABEL"
+                />
+                <field
+                        name="linkedin"
+                        type="text"
+                        label="LINKEDIN_LABEL"
+                />
+                <field
+                        name="twitter"
+                        type="text"
+                        label="TWTTER_LABEL"
+                />
+                <field
+                        name="whatsapp"
+                        type="text"
+                        label="WHATSAPP_LABEL"
+                />
+                <field
+                        name="whatsapp_msg"
+                        type="text"
+                        label="WHATSAPP_MSG_LABEL"
+                />
+            </fieldset>
+            <fieldset name="advanced">
+                <field
+                        name="moduleclass_sfx"
+                        type="textarea"
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+                        rows="3"
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
