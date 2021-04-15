@@ -41,12 +41,12 @@ jQuery(document).ready(function ($) {
                 }
 
             } else {
-                $('#header_wrap').css('background-color', 'rgba(0,0,0,0.5)');
+                $('#header_wrap').css('background-color', 'transparent');
                 if (!$('#logo').hasClass('white')) {
                     $('#logo').addClass('white');
                 }
                 $('#topmenu a, #topmenu li.active a, #topmenu li.active a:hover, #topmenu span, #topmenu li.active span, #topmenu li.active span:hover').css('color', '#FFF');
-                $('#topmenu li ul').css('background-color', 'transparent');
+                $('#topmenu li ul').css('background-color', 'rgba(0,0,0,0.5)');
                 if ($('#topmenu a').hasClass('border-blue')) {
                     $('#topmenu a').removeClass('border-blue');
                 }
