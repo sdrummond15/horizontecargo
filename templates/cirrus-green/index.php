@@ -38,13 +38,12 @@ if ($LeftMenuOn and $RightMenuOn) {
     <link rel="stylesheet" href="<?= $this->baseurl ?>/templates/system/css/system.css" type="text/css" />
     <link rel="stylesheet" href="<?= $this->baseurl ?>/templates/system/css/general.css" type="text/css" />
     <link rel="stylesheet" href="<?= $this->baseurl ?>/templates/<?= $this->template; ?>/css/fontawesome-all.min.css" type="text/css" />
+    <link rel="stylesheet" href="<?= $this->baseurl ?>/templates/<?= $this->template; ?>/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="<?= $this->baseurl ?>/templates/<?= $this->template; ?>/css/template.css" type="text/css" />
-    <script type="text/javascript" src="<?= $this->baseurl ?>/templates/<?= $this->template; ?>/js/sfhover.js">
-    </script>
-    <script type="text/javascript" src="<?= $this->baseurl ?>/templates/<?= $this->template; ?>/js/jquery-1.11.3.js">
-    </script>
-    <script type="text/javascript" src="<?= $this->baseurl ?>/templates/<?= $this->template; ?>/js/script_main.js">
-    </script>
+    <script type="text/javascript" src="<?= $this->baseurl ?>/templates/<?= $this->template; ?>/js/sfhover.js"></script>
+    <script type="text/javascript" src="<?= $this->baseurl ?>/templates/<?= $this->template; ?>/js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="<?= $this->baseurl ?>/templates/<?= $this->template; ?>/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?= $this->baseurl ?>/templates/<?= $this->template; ?>/js/script_main.js"></script>
 </head>
 
 <body>
@@ -55,7 +54,7 @@ if ($LeftMenuOn and $RightMenuOn) {
             <div id="header">
 
                 <!-- Logo -->
-                <div id="logo">
+                <div id="logo" class="white">
                     <?php if ($logo && $logoimage == 1) : ?>
                         <a href="<?= $this->baseurl ?>">
                             <img src="<?= htmlspecialchars($logo); ?>" alt="<?= $sitename; ?>" />
@@ -84,6 +83,11 @@ if ($LeftMenuOn and $RightMenuOn) {
                             <div id="search">
                                 <jdoc:include type="modules" name="position-0" />
                             </div>
+                        </div>
+                    <?php endif; ?>
+                    <?php if ($this->countModules('position-15')) : ?>
+                        <div id="right_menu">
+                            <jdoc:include type="modules" name="position-15" />
                         </div>
                     <?php endif; ?>
                     <div id="topmenu_wrap">
@@ -153,7 +157,7 @@ if ($LeftMenuOn and $RightMenuOn) {
 
                 <?php if ($this->countModules('position-12')) : ?>
                     <div id="content-top">
-                        <jdoc:include type="modules" name="position-12" style="xhtml"/>
+                        <jdoc:include type="modules" name="position-12" style="xhtml" />
                     </div>
                 <?php endif; ?>
 

@@ -110,17 +110,3 @@ ul.contact-social-footer li a.instagram i{
     text-align: center;
     margin-top: 2px;
 }
-
-.phone,
-.email {
-    display: table;
-    margin: 0 auto 5px auto;
-    color: #fff;
-    font-size: 20px;
-    text-decoration: none;
-}
-
-.phone a:hover,
-.email a:hover{
-    color: #e8e8e8;
-}

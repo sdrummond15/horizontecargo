@@ -1,7 +1,0 @@
-Fonts:
-
-URL:
-http://www.google.com/webfonts
-
-Name:
-Droid Sans, Normal 400, Bold 700

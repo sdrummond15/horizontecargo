@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset name="image_modal" class="image-subform">
+		<field name="icon" type="media" default="" label="Imagem" size="30" directory="services"/>
+		<field name="title" type="text" default="" label="Título"/>
+		<field name="menu" type="menuitem" label="Link" filter="integer" />
+	</fieldset>
+</form>
+

@@ -1,23 +1,211 @@
 @font-face {
-    font-family: Papyrus;
-    src: url(../css/fonts/Papyrus-Regular.eot);
-    src: 
-    url(../css/fonts/Papyrus-Regular.eot?#iefix) format('embedded-opentype'), 
-    url(../css/fonts/Papyrus-Regular.woff2) format('woff2'), 
-    url(../css/fonts/Papyrus-Regular.woff) format('woff'), 
-    url(../css/fonts/Papyrus-Regular.ttf) format('truetype'), 
-    url(../css/fonts/Papyrus-Regular.svg#Papyrus-Regular) format('svg');
-    font-weight: 400;
+    font-family: 'Catamaran';
+    src: url('../css/fonts/Catamaran-ExtraBold.eot');
+    src: url('../css/fonts/Catamaran-ExtraBold.eot?#iefix') format('embedded-opentype'), url('../css/fonts/Catamaran-ExtraBold.woff2') format('woff2'), url('../css/fonts/Catamaran-ExtraBold.woff') format('woff'), url('../css/fonts/Catamaran-ExtraBold.ttf') format('truetype'), url('../css/fonts/Catamaran-ExtraBold.svg#Catamaran-ExtraBold') format('svg');
+    font-weight: 800;
     font-style: normal;
+    font-display: swap;
 }
 
-a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, 
-body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, 
-em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, 
-header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, 
-nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, 
-strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, 
-ul, var, video {
+@font-face {
+    font-family: 'Catamaran';
+    src: url('../css/fonts/Catamaran-Thin.eot');
+    src: url('../css/fonts/Catamaran-Thin.eot?#iefix') format('embedded-opentype'), url('../css/fonts/Catamaran-Thin.woff2') format('woff2'), url('../css/fonts/Catamaran-Thin.woff') format('woff'), url('../css/fonts/Catamaran-Thin.ttf') format('truetype'), url('../css/fonts/Catamaran-Thin.svg#Catamaran-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Catamaran';
+    src: url('../css/fonts/Catamaran-SemiBold.eot');
+    src: url('../css/fonts/Catamaran-SemiBold.eot?#iefix') format('embedded-opentype'), url('../css/fonts/Catamaran-SemiBold.woff2') format('woff2'), url('../css/fonts/Catamaran-SemiBold.woff') format('woff'), url('../css/fonts/Catamaran-SemiBold.ttf') format('truetype'), url('../css/fonts/Catamaran-SemiBold.svg#Catamaran-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Catamaran';
+    src: url('../css/fonts/Catamaran-Black.eot');
+    src: url('../css/fonts/Catamaran-Black.eot?#iefix') format('embedded-opentype'), url('../css/fonts/Catamaran-Black.woff2') format('woff2'), url('../css/fonts/Catamaran-Black.woff') format('woff'), url('../css/fonts/Catamaran-Black.ttf') format('truetype'), url('../css/fonts/Catamaran-Black.svg#Catamaran-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Catamaran';
+    src: url('../css/fonts/Catamaran-Bold.eot');
+    src: url('../css/fonts/Catamaran-Bold.eot?#iefix') format('embedded-opentype'), url('../css/fonts/Catamaran-Bold.woff2') format('woff2'), url('../css/fonts/Catamaran-Bold.woff') format('woff'), url('../css/fonts/Catamaran-Bold.ttf') format('truetype'), url('../css/fonts/Catamaran-Bold.svg#Catamaran-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Catamaran';
+    src: url('../css/fonts/Catamaran-Medium.eot');
+    src: url('../css/fonts/Catamaran-Medium.eot?#iefix') format('embedded-opentype'), url('../css/fonts/Catamaran-Medium.woff2') format('woff2'), url('../css/fonts/Catamaran-Medium.woff') format('woff'), url('../css/fonts/Catamaran-Medium.ttf') format('truetype'), url('../css/fonts/Catamaran-Medium.svg#Catamaran-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Catamaran';
+    src: url('../css/fonts/Catamaran-Regular.eot');
+    src: url('../css/fonts/Catamaran-Regular.eot?#iefix') format('embedded-opentype'), url('../css/fonts/Catamaran-Regular.woff2') format('woff2'), url('../css/fonts/Catamaran-Regular.woff') format('woff'), url('../css/fonts/Catamaran-Regular.ttf') format('truetype'), url('../css/fonts/Catamaran-Regular.svg#Catamaran-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Catamaran';
+    src: url('../css/fonts/Catamaran-Light.eot');
+    src: url('../css/fonts/Catamaran-Light.eot?#iefix') format('embedded-opentype'), url('../css/fonts/Catamaran-Light.woff2') format('woff2'), url('../css/fonts/Catamaran-Light.woff') format('woff'), url('../css/fonts/Catamaran-Light.ttf') format('truetype'), url('../css/fonts/Catamaran-Light.svg#Catamaran-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Catamaran';
+    src: url('../css/fonts/Catamaran-ExtraLight.eot');
+    src: url('../css/fonts/Catamaran-ExtraLight.eot?#iefix') format('embedded-opentype'), url('../css/fonts/Catamaran-ExtraLight.woff2') format('woff2'), url('../css/fonts/Catamaran-ExtraLight.woff') format('woff'), url('../css/fonts/Catamaran-ExtraLight.ttf') format('truetype'), url('../css/fonts/Catamaran-ExtraLight.svg#Catamaran-ExtraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../css/fonts/JosefinSans-Regular.eot');
+    src: url('../css/fonts/JosefinSans-Regular.eot?#iefix') format('embedded-opentype'), url('../css/fonts/JosefinSans-Regular.woff2') format('woff2'), url('../css/fonts/JosefinSans-Regular.woff') format('woff'), url('../css/fonts/JosefinSans-Regular.ttf') format('truetype'), url('../css/fonts/JosefinSans-Regular.svg#JosefinSans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../css/fonts/JosefinSans-BoldItalic.eot');
+    src: url('../css/fonts/JosefinSans-BoldItalic.eot?#iefix') format('embedded-opentype'), url('../css/fonts/JosefinSans-BoldItalic.woff2') format('woff2'), url('../css/fonts/JosefinSans-BoldItalic.woff') format('woff'), url('../css/fonts/JosefinSans-BoldItalic.ttf') format('truetype'), url('../css/fonts/JosefinSans-BoldItalic.svg#JosefinSans-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../css/fonts/JosefinSans-MediumItalic.eot');
+    src: url('../css/fonts/JosefinSans-MediumItalic.eot?#iefix') format('embedded-opentype'), url('../css/fonts/JosefinSans-MediumItalic.woff2') format('woff2'), url('../css/fonts/JosefinSans-MediumItalic.woff') format('woff'), url('../css/fonts/JosefinSans-MediumItalic.ttf') format('truetype'), url('../css/fonts/JosefinSans-MediumItalic.svg#JosefinSans-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../css/fonts/JosefinSans-Light.eot');
+    src: url('../css/fonts/JosefinSans-Light.eot?#iefix') format('embedded-opentype'), url('../css/fonts/JosefinSans-Light.woff2') format('woff2'), url('../css/fonts/JosefinSans-Light.woff') format('woff'), url('../css/fonts/JosefinSans-Light.ttf') format('truetype'), url('../css/fonts/JosefinSans-Light.svg#JosefinSans-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../css/fonts/JosefinSans-SemiBoldItalic.eot');
+    src: url('../css/fonts/JosefinSans-SemiBoldItalic.eot?#iefix') format('embedded-opentype'), url('../css/fonts/JosefinSans-SemiBoldItalic.woff2') format('woff2'), url('../css/fonts/JosefinSans-SemiBoldItalic.woff') format('woff'), url('../css/fonts/JosefinSans-SemiBoldItalic.ttf') format('truetype'), url('../css/fonts/JosefinSans-SemiBoldItalic.svg#JosefinSans-SemiBoldItalic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../css/fonts/JosefinSans-Medium.eot');
+    src: url('../css/fonts/JosefinSans-Medium.eot?#iefix') format('embedded-opentype'), url('../css/fonts/JosefinSans-Medium.woff2') format('woff2'), url('../css/fonts/JosefinSans-Medium.woff') format('woff'), url('../css/fonts/JosefinSans-Medium.ttf') format('truetype'), url('../css/fonts/JosefinSans-Medium.svg#JosefinSans-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../css/fonts/JosefinSans-Bold.eot');
+    src: url('../css/fonts/JosefinSans-Bold.eot?#iefix') format('embedded-opentype'), url('../css/fonts/JosefinSans-Bold.woff2') format('woff2'), url('../css/fonts/JosefinSans-Bold.woff') format('woff'), url('../css/fonts/JosefinSans-Bold.ttf') format('truetype'), url('../css/fonts/JosefinSans-Bold.svg#JosefinSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../css/fonts/JosefinSans-Italic.eot');
+    src: url('../css/fonts/JosefinSans-Italic.eot?#iefix') format('embedded-opentype'), url('../css/fonts/JosefinSans-Italic.woff2') format('woff2'), url('../css/fonts/JosefinSans-Italic.woff') format('woff'), url('../css/fonts/JosefinSans-Italic.ttf') format('truetype'), url('../css/fonts/JosefinSans-Italic.svg#JosefinSans-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../css/fonts/JosefinSans-SemiBold.eot');
+    src: url('../css/fonts/JosefinSans-SemiBold.eot?#iefix') format('embedded-opentype'), url('../css/fonts/JosefinSans-SemiBold.woff2') format('woff2'), url('../css/fonts/JosefinSans-SemiBold.woff') format('woff'), url('../css/fonts/JosefinSans-SemiBold.ttf') format('truetype'), url('../css/fonts/JosefinSans-SemiBold.svg#JosefinSans-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../css/fonts/JosefinSans-ExtraLightItalic.eot');
+    src: url('../css/fonts/JosefinSans-ExtraLightItalic.eot?#iefix') format('embedded-opentype'), url('../css/fonts/JosefinSans-ExtraLightItalic.woff2') format('woff2'), url('../css/fonts/JosefinSans-ExtraLightItalic.woff') format('woff'), url('../css/fonts/JosefinSans-ExtraLightItalic.ttf') format('truetype'), url('../css/fonts/JosefinSans-ExtraLightItalic.svg#JosefinSans-ExtraLightItalic') format('svg');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../css/fonts/JosefinSans-ExtraLight.eot');
+    src: url('../css/fonts/JosefinSans-ExtraLight.eot?#iefix') format('embedded-opentype'), url('../css/fonts/JosefinSans-ExtraLight.woff2') format('woff2'), url('../css/fonts/JosefinSans-ExtraLight.woff') format('woff'), url('../css/fonts/JosefinSans-ExtraLight.ttf') format('truetype'), url('../css/fonts/JosefinSans-ExtraLight.svg#JosefinSans-ExtraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../css/fonts/JosefinSans-LightItalic.eot');
+    src: url('../css/fonts/JosefinSans-LightItalic.eot?#iefix') format('embedded-opentype'), url('../css/fonts/JosefinSans-LightItalic.woff2') format('woff2'), url('../css/fonts/JosefinSans-LightItalic.woff') format('woff'), url('../css/fonts/JosefinSans-LightItalic.ttf') format('truetype'), url('../css/fonts/JosefinSans-LightItalic.svg#JosefinSans-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../css/fonts/JosefinSans-ThinItalic.eot');
+    src: url('../css/fonts/JosefinSans-ThinItalic.eot?#iefix') format('embedded-opentype'), url('../css/fonts/JosefinSans-ThinItalic.woff2') format('woff2'), url('../css/fonts/JosefinSans-ThinItalic.woff') format('woff'), url('../css/fonts/JosefinSans-ThinItalic.ttf') format('truetype'), url('../css/fonts/JosefinSans-ThinItalic.svg#JosefinSans-ThinItalic') format('svg');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../css/fonts/JosefinSans-Thin.eot');
+    src: url('../css/fonts/JosefinSans-Thin.eot?#iefix') format('embedded-opentype'), url('../css/fonts/JosefinSans-Thin.woff2') format('woff2'), url('../css/fonts/JosefinSans-Thin.woff') format('woff'), url('../css/fonts/JosefinSans-Thin.ttf') format('truetype'), url('../css/fonts/JosefinSans-Thin.svg#JosefinSans-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -26,8 +214,7 @@ ul, var, video {
     vertical-align: baseline;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
-section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
@@ -60,20 +247,19 @@ html {
 body {
     height: 100%;
     text-align: left;
-    font-family: Montserrat, 'Droid Sans', sans-serif, Helvetica, Arial;
-    font-size: .8em;
-    line-height: 1.5em;
-    color: #341e11;
+    font-family: 'Catamaran', 'Droid Sans', sans-serif, Helvetica, Arial;
+    font-size: 18px;
+    color: #444242;
 }
 
 a {
-    color: #90c140;
-    text-decoration: underline;
+    color: #444242;
+    font-weight: 600;
 }
 
 a:hover {
-    color: #000;
-    text-decoration: underline;
+    color: #2f2a29;
+    text-decoration: none;
 }
 
 img {
@@ -89,11 +275,12 @@ b, strong {
 }
 
 p {
-    line-height: 1.6em;
+    line-height: 1.4;
     margin: 8px 0;
 }
 
 h1 {
+    font-family: 'Josefin Sans', 'Droid Sans', sans-serif, Helvetica, Arial;
     font-weight: 400;
     color: #90c140;
     font-size: 22px;
@@ -112,6 +299,7 @@ h1 a:hover {
 }
 
 h2 {
+    font-family: 'Josefin Sans', 'Droid Sans', sans-serif, Helvetica, Arial;
     font-weight: 400;
     color: #000;
     font-size: 18px;
@@ -130,6 +318,7 @@ h2 a:hover {
 }
 
 h3 {
+    font-family: 'Josefin Sans', 'Droid Sans', sans-serif, Helvetica, Arial;
     font-weight: 400;
     color: #000;
     font-size: 18px;
@@ -214,28 +403,25 @@ hr {
     height: 100%;
 }
 
-#contact-form button.validate, #login-form input.button, #mailto-window button, 
-#member-profile button.validate, #member-registration button.validate, 
-#searchForm button, #user-registration button.validate, .btn, .login button, 
-.logout button {
+#contact-form button.validate, #login-form input.button, #mailto-window button, #member-profile button.validate, #member-registration button.validate, #searchForm button, #user-registration button.validate, .btn, .login button, .logout button {
     width: auto;
     padding: 8px 20px;
     float: right;
-    background-color: #003c21;
-    color: #ecf9ec;
+    background-color: #004b81;
+    color: #FFF;
     cursor: pointer;
     margin-bottom: 13px;
     border: 0;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     font-size: 20px;
 }
 
-#contact-form button.validate:hover, #login-form input.button:hover, 
-#mailto-window button:hover, #member-profile button.validate:hover, 
-#member-registration button.validate:hover, #searchForm button:hover, 
-#user-registration button.validate:hover, .btn:hover, .login button:hover, 
-.logout button:hover {
-    background-color: #014f11;
+#contact-form button.validate:hover, #login-form input.button:hover, #mailto-window button:hover, #member-profile button.validate:hover, #member-registration button.validate:hover, #searchForm button:hover, #user-registration button.validate:hover, .btn:hover, .login button:hover, .logout button:hover {
+    background-color: #003e6b;
+}
+
+p.link-c {
+    text-align: right!important;
 }
 
 .readmore a {
@@ -261,16 +447,16 @@ hr {
 
 #logo {
     float: left;
-    padding: 10px 15px;
+    padding: 8px 0 0 15px;
+}
+
+#logo.white {
+    filter: brightness(0) invert(1);
 }
 
 #logo a {
     display: table;
     line-height: .9;
-}
-
-#logo a img {
-    height: 70px;
 }
 
 #topnav_wrap {
@@ -281,7 +467,6 @@ hr {
 #search_wrap {
     width: 100%;
     display: table;
-    border-bottom: 1px solid #fff;
 }
 
 .customcabecalho {
@@ -310,17 +495,17 @@ hr {
     color: #fff;
     font-size: 14px;
     line-height: 1;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     text-decoration: none;
     vertical-align: middle;
 }
 
 .customcabecalho address a:hover {
-    font-family: Montserrat;
+    font-family: 'Catamaran';
 }
 
 .customcabecalho a:hover {
-    font-family: Montserrat;
+    font-family: 'Catamaran';
 }
 
 #search label.element-invisible {
@@ -363,25 +548,31 @@ hr {
     position: relative;
 }
 
+#right_menu {
+    float: right;
+    margin-left: 40px;
+}
+
 #topmenu_wrap {
     float: right;
 }
 
 #topmenu ul {
     padding: 0;
-    margin: 15px 0 0 0;
+    margin: 12px 0 0 0;
     list-style: none;
 }
 
-#topmenu a {
+#topmenu span, #topmenu a {
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 500;
     display: block;
     color: #fff;
     text-decoration: none;
-    padding-bottom: 5px;
+    padding-bottom: 3px;
     text-transform: uppercase;
     border-bottom: 1px solid transparent;
+    cursor: pointer;
 }
 
 #topmenu a:hover {
@@ -391,9 +582,9 @@ hr {
 #topmenu li.active a, #topmenu li.active a:hover {
     color: #fff;
     text-decoration: none;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     border: 0;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 #topmenu li {
@@ -404,29 +595,38 @@ hr {
 #topmenu li ul {
     position: absolute;
     font-size: 12px;
-    width: 172px;
+    width: 240px;
     left: -999em;
-    background-color: #000;
-    border: 0;
-    margin-left: -1px;
+    background-color: rgba(0,0,0,0.5);
+    border: 1px solid #FFF;
+    margin-left: -30px;
     z-index: 100;
+    margin-top: 0;
+    max-height: 80vh;
+    overflow-y: auto;
 }
 
 #topmenu li li, #topmenu li li:first-child {
     border: 0;
-    margin-bottom: -1px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
 }
 
 #topmenu li li a {
-    width: 172px;
-    background-color: #000;
     border: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
 
 #topmenu li ul a {
-    width: 172px;
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#topmenu li ul a:hover {
+    border: 0;
 }
 
 #topmenu li.active ul a:hover {
@@ -444,14 +644,11 @@ hr {
     margin: -39px 0 0 220px;
 }
 
-#topmenu li.sfhover ul ul, #topmenu li.sfhover ul ul ul, 
-#topmenu li:hover ul ul, #topmenu li:hover ul ul ul {
+#topmenu li.sfhover ul ul, #topmenu li.sfhover ul ul ul, #topmenu li:hover ul ul, #topmenu li:hover ul ul ul {
     left: -999em;
 }
 
-#topmenu li li li.sfhover ul, #topmenu li li li:hover ul, 
-#topmenu li li.sfhover ul, #topmenu li li:hover ul, #topmenu li.sfhover ul, 
-#topmenu li:hover ul {
+#topmenu li li li.sfhover ul, #topmenu li li li:hover ul, #topmenu li li.sfhover ul, #topmenu li li:hover ul, #topmenu li.sfhover ul, #topmenu li:hover ul {
     left: auto;
 }
 
@@ -496,7 +693,7 @@ hr {
 
 #leftmenu a, #rightmenu a {
     color: #003c21;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     font-size: 24px;
     line-height: 1.2;
     text-decoration: none;
@@ -534,7 +731,7 @@ hr {
 }
 
 #leftmenu li.current a, #rightmenu li.current a {
-    font-family: Montserrat;
+    font-family: 'Catamaran';
 }
 
 #leftmenu li.current a:hover, #rightmenu li.current a:hover {
@@ -558,7 +755,7 @@ hr {
 #topnav div.moduletable h3 {
     margin: 60px 0 0 0;
     font-size: 40px;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     text-transform: uppercase;
     color: #003c21;
 }
@@ -589,9 +786,9 @@ hr {
 #content-w3 {
     width: 1170px;
     float: left;
-    padding-top: 40px;
+    padding-top: 60px;
     overflow: hidden;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 #content-w1 h3, #content-w2 h3, #content-w3 h3 {
@@ -826,9 +1023,7 @@ table.category th, table.jlist-table th, table.newsfeeds th, table.weblinks th {
     background: #000;
 }
 
-table.category th, table.category th a, table.jlist-table th, 
-table.jlist-table th a, table.newsfeeds th, table.newsfeeds th a, 
-table.weblinks th, table.weblinks th a {
+table.category th, table.category th a, table.jlist-table th, table.jlist-table th a, table.newsfeeds th, table.newsfeeds th a, table.weblinks th, table.weblinks th a {
     color: #fff;
 }
 
@@ -902,7 +1097,7 @@ li.next, li.pagenav-next {
     padding-right: 6px;
     margin-left: 0;
     margin-right: 6px;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     color: #bcd1a1;
     font-size: 18px;
 }
@@ -912,7 +1107,7 @@ li.next, li.pagenav-next {
     padding-right: 6px;
     margin-left: 0;
     margin-right: 6px;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     color: #437a0e;
     font-size: 18px;
     text-decoration: none;
@@ -934,14 +1129,13 @@ li.next, li.pagenav-next {
     margin-right: 20px;
 }
 
-.pagination li.pagination-end, .pagination li.pagination-next, 
-.pagination li.pagination-prev, .pagination li.pagination-start {
+.pagination li.pagination-end, .pagination li.pagination-next, .pagination li.pagination-prev, .pagination li.pagination-start {
     border: 0;
 }
 
 p.counter {
     color: #003c21!important;
-    font-family: Montserrat!important;
+    font-family: 'Catamaran'!important;
     font-size: 16px!important;
     padding: 8px;
     text-align: center;
@@ -1116,8 +1310,7 @@ fieldset div div input {
     padding: 3px 0;
 }
 
-#users-profile-core legend, #users-profile-custom legend, .profile-edit legend, 
-.registration legend {
+#users-profile-core legend, #users-profile-custom legend, .profile-edit legend, .registration legend {
     font-weight: 700;
 }
 
@@ -1126,20 +1319,16 @@ fieldset div div input {
     padding: 15px;
 }
 
-.profile-edit form#member-profile fieldset dd, 
-.registration form#member-registration fieldset dd {
+.profile-edit form#member-profile fieldset dd, .registration form#member-registration fieldset dd {
     float: none;
     padding: 5px 0;
 }
 
-.profile-edit form#member-profile fieldset dd input, 
-.profile-edit form#member-profile fieldset dd select, 
-.registration form#member-registration fieldset dd input {
+.profile-edit form#member-profile fieldset dd input, .profile-edit form#member-profile fieldset dd select, .registration form#member-registration fieldset dd input {
     width: 17em;
 }
 
-.profile-edit form#member-profile fieldset dt, 
-.registration form#member-registration fieldset dt {
+.profile-edit form#member-profile fieldset dt, .registration form#member-registration fieldset dt {
     clear: left;
     float: left;
     padding: 5px 5px 5px 0;
@@ -1409,7 +1598,7 @@ a.feed-link {
 
 .copyrightint strong {
     font-weight: 400;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     text-transform: uppercase;
 }
 
@@ -1432,7 +1621,7 @@ a.feed-link {
     background-size: cover;
 }
 
-.overlayer{
+.overlayer {
     width: 100%;
     display: table;
 }
@@ -1500,8 +1689,7 @@ a.feed-link {
     display: block;
 }
 
-#adminForm.form-validate fieldset div.formelm input, 
-#adminForm.form-validate fieldset div.formelm label {
+#adminForm.form-validate fieldset div.formelm input, #adminForm.form-validate fieldset div.formelm label {
     display: inline-block;
 }
 
@@ -1509,8 +1697,7 @@ a.feed-link {
     width: 120px;
 }
 
-#adminForm.form-validate fieldset div.formelm-area input, 
-#adminForm.form-validate fieldset div.formelm-area label {
+#adminForm.form-validate fieldset div.formelm-area input, #adminForm.form-validate fieldset div.formelm-area label {
     display: inline-block;
 }
 
@@ -1561,8 +1748,7 @@ form#adminForm.form-validate.form-vertical div.btn-toolbar div.btn-group {
     display: inline;
 }
 
-form#adminForm fieldset div div#editor div div a, 
-form#adminForm fieldset div div#editor div#editor-xtd-buttons div a {
+form#adminForm fieldset div div#editor div div a, form#adminForm fieldset div div#editor div#editor-xtd-buttons div a {
     text-decoration: none;
     display: inline;
 }
@@ -1653,10 +1839,7 @@ body.contentpane {
     margin: 10px;
 }
 
-body.contentpane, body.contentpane h1, body.contentpane h1 a, 
-body.contentpane h2, body.contentpane h2 a, body.contentpane h3, 
-body.contentpane h3 a, body.contentpane h4, body.contentpane h4 a, 
-body.contentpane h5, body.contentpane h5 a {
+body.contentpane, body.contentpane h1, body.contentpane h1 a, body.contentpane h2, body.contentpane h2 a, body.contentpane h3, body.contentpane h3 a, body.contentpane h4, body.contentpane h4 a, body.contentpane h5, body.contentpane h5 a {
     color: #000;
 }
 
@@ -1664,15 +1847,22 @@ body.contentpane a:hover {
     color: #000;
 }
 
+.intro-image {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 .img-fulltext-right, .img-intro-right {
     float: right;
+    margin: 0 0 10px 30px;
 }
 
 .img-fulltext-left, .img-intro-left {
     float: left;
+    margin: 0 30px 10px 0;
 }
 
-.blog-featured-home img{ 
+.blog-featured-home img {
     margin-top: -20px;
 }
 
@@ -1693,6 +1883,7 @@ body.contentpane a:hover {
 .blog-featured-home .readmore a:hover {
     color: #8A3300;
 }
+
 .custommenu-site-map {
     padding: 60px 0;
     display: table;
@@ -1719,13 +1910,13 @@ body.contentpane a:hover {
 
 .custommenu-site-map>div ul li a {
     color: #fff;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     font-size: 18px;
     text-decoration: none;
 }
 
 .custommenu-site-map>div ul li.active a {
-    font-family: Montserrat;
+    font-family: 'Catamaran';
 }
 
 .custommenu-site-map>div ul li ul li {
@@ -1734,7 +1925,7 @@ body.contentpane a:hover {
 
 .custommenu-site-map>div ul li ul li a {
     color: #fff;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     font-size: 16px;
     text-decoration: none;
 }
@@ -1747,7 +1938,7 @@ body.contentpane a:hover {
 
 .moduletable-localizacao h3 {
     color: #fff;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     font-size: 30px;
     text-decoration: none;
     text-align: center;
@@ -1756,7 +1947,7 @@ body.contentpane a:hover {
 
 .custom-localizacao h4 {
     color: #fff;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     font-size: 18px;
     text-decoration: none;
     text-align: center;
@@ -1767,7 +1958,7 @@ body.contentpane a:hover {
 
 .custom-localizacao p {
     color: #fff;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     font-size: 18px;
     text-decoration: none;
     text-align: center;
@@ -1818,12 +2009,12 @@ body.contentpane a:hover {
 
 .moduletable-newsletter .acym_introtext {
     color: #fff;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     font-size: 20px;
     margin-bottom: 20px;
 }
 
-.acym_module_form .onefield{
+.acym_module_form .onefield {
     margin: 0 !important;
 }
 
@@ -1833,7 +2024,7 @@ body.contentpane a:hover {
     padding: 5px 10px;
     border: 0;
     margin-bottom: 5px;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     font-size: 18px;
 }
 
@@ -1863,7 +2054,7 @@ body.contentpane a:hover {
     display: table;
 }
 
-.custom-mudapravida-home > div {
+.custom-mudapravida-home>div {
     width: 1170px;
     margin: 60px auto;
     display: table;
@@ -1891,6 +2082,19 @@ body.contentpane a:hover {
     text-shadow: 0 0 7px #000;
 }
 
+.item-page-home p {
+    font-size: 24px;
+    text-align: justify;
+}
+
+.item-page-home .img-fulltext-right {
+    margin-top: -30px;
+}
+
+a.readmore-link-c {
+    margin: 20 0 0 0;
+}
+
 .item-page-quem-somos .img-fulltext-right {
     padding: 0 10px 40px 40px;
 }
@@ -1902,13 +2106,13 @@ body.contentpane a:hover {
 .item-page-quem-somos p {
     line-height: 1.2;
     color: #333;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     font-size: 18px;
     margin: 0 0 10px 0;
 }
 
 .blog-depoimentos h2 {
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     color: #003c21;
     text-decoration: none;
     line-height: 1;
@@ -1916,7 +2120,7 @@ body.contentpane a:hover {
 }
 
 .blog-depoimentos h4 {
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     color: #003c21;
     text-decoration: none;
     line-height: 1;
@@ -1927,7 +2131,7 @@ body.contentpane a:hover {
 .blog-depoimentos p {
     line-height: 1.2;
     color: #333;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     font-size: 18px;
     margin: 0 0 10px 0;
 }
@@ -1966,7 +2170,7 @@ body.contentpane a:hover {
 }
 
 .menu-informe-se li.active a {
-    font-family: Montserrat;
+    font-family: 'Catamaran';
 }
 
 .menu-informe-se li.active a:hover {
@@ -1975,7 +2179,7 @@ body.contentpane a:hover {
 
 .menu-informe-se li a {
     color: #003c21;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     font-size: 24px;
     line-height: 1.2;
     text-decoration: none;
@@ -1986,8 +2190,7 @@ body.contentpane a:hover {
     color: #437a0e;
 }
 
-.blog-noticias-agriculas .img-intro-right, 
-.item-page-noticias-agriculas .img-fulltext-right {
+.blog-noticias-agriculas .img-intro-right, .item-page-noticias-agriculas .img-fulltext-right {
     width: 300px;
     height: 200px;
     overflow: hidden;
@@ -1995,14 +2198,13 @@ body.contentpane a:hover {
     box-shadow: 2px 2px 10px #000;
 }
 
-.blog-noticias-agriculas .img-intro-right img, 
-.item-page-noticias-agriculas .img-fulltext-right img {
+.blog-noticias-agriculas .img-intro-right img, .item-page-noticias-agriculas .img-fulltext-right img {
     height: 100%;
 }
 
 .blog-noticias-agriculas h2 a, .item-page-noticias-agriculas h2 {
     color: #003c21;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     font-size: 26px;
     line-height: 1.2;
     text-decoration: none;
@@ -2010,18 +2212,17 @@ body.contentpane a:hover {
 
 .blog-noticias-agriculas .published, .item-page-noticias-agriculas .published {
     color: #003c21;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     font-size: 14px;
 }
 
-.blog-noticias-agriculas dl.article-info, 
-.item-page-noticias-agriculas dl.article-info {
+.blog-noticias-agriculas dl.article-info, .item-page-noticias-agriculas dl.article-info {
     margin-bottom: 15px;
 }
 
 .blog-noticias-agriculas h4, .item-page-noticias-agriculas h4 {
     color: #003c21;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     font-size: 18px;
     line-height: 1.2;
     text-decoration: none;
@@ -2031,7 +2232,7 @@ body.contentpane a:hover {
 .blog-noticias-agriculas p, .item-page-noticias-agriculas p {
     line-height: 1.2;
     color: #333;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     font-size: 18px;
     margin: 0 0 10px 0;
 }
@@ -2055,7 +2256,7 @@ body.contentpane a:hover {
 }
 
 .item-page-noticias-agriculas h5 {
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     color: #003c21;
     font-size: 14px;
 }
@@ -2081,7 +2282,7 @@ body.contentpane a:hover {
 .blog-informe-cisbra .category-desc p {
     line-height: 1.2;
     color: #333;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     font-size: 18px;
     margin: 0 0 10px 0;
 }
@@ -2095,10 +2296,7 @@ body.contentpane a:hover {
     position: relative;
 }
 
-.blog-informe-cisbra article:nth-child(12), 
-.blog-informe-cisbra article:nth-child(16), 
-.blog-informe-cisbra article:nth-child(4), 
-.blog-informe-cisbra article:nth-child(8) {
+.blog-informe-cisbra article:nth-child(12), .blog-informe-cisbra article:nth-child(16), .blog-informe-cisbra article:nth-child(4), .blog-informe-cisbra article:nth-child(8) {
     margin-right: 0;
 }
 
@@ -2136,14 +2334,14 @@ body.contentpane a:hover {
     text-align: center;
     text-decoration: none;
     color: #fff;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     font-size: 24px;
 }
 
 .titulo-contato h2 {
     text-decoration: none;
     color: #003c21;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     font-size: 20px;
     padding: 20px 0;
 }
@@ -2161,7 +2359,7 @@ body.contentpane a:hover {
     border: 0;
     background-color: #ecf9ec;
     color: #003c21;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     font-size: 20px;
 }
 
@@ -2172,7 +2370,7 @@ body.contentpane a:hover {
     border: 0;
     background-color: #ecf9ec;
     color: #003c21;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     font-size: 20px;
 }
 
@@ -2210,7 +2408,7 @@ body.contentpane a:hover {
 .menuresp a {
     text-align: center;
     color: #000;
-    font-family: Montserrat;
+    font-family: 'Catamaran';
     font-size: 18px;
     text-decoration: none;
     margin: 0;
@@ -2240,20 +2438,37 @@ body.contentpane a:hover {
     display: none;
 }
 
-.color-brown, .color-is-brown {
-    color: #341e11!important;
+.color-grey {
+    color: #504f51!important;
 }
 
-.color-brown:hover {
-    color: #52301b!important;
+.color-grey:hover {
+    color: #2f2a29!important;
 }
 
-#topmenu a.border-brown {
-    border-bottom: 1px solid transparent;
+.border-blue {
+    border-color: #004b81!important;
 }
 
-#topmenu a.border-brown:hover {
-    border-bottom: 1px solid #341e11;
+.color-blue {
+    color: #004b81!important;
+}
+
+.color-blue:hover {
+    color: #003e6b!important;
+}
+
+.btn-cotacao.color-blue:hover {
+    color: #FFF!important;
+    background-color: #004b81!important;
+}
+
+#topmenu a.border-grey {
+    border-color: transparent!important;
+}
+
+#topmenu a.border-grey:hover {
+    border-color: #2f2a29!important;
 }
 
 @media screen and (max-width:1200px) {
@@ -2432,10 +2647,7 @@ body.contentpane a:hover {
     .titulo-contato h2 {
         font-size: 24px;
     }
-    #contact-form button.validate, #login-form input.button, 
-    #mailto-window button, #member-profile button.validate, 
-    #member-registration button.validate, #searchForm button, 
-    #user-registration button.validate, .btn, .login button, .logout button {
+    #contact-form button.validate, #login-form input.button, #mailto-window button, #member-profile button.validate, #member-registration button.validate, #searchForm button, #user-registration button.validate, .btn, .login button, .logout button {
         font-size: 14px;
     }
     .contact-form input, .contact-form textarea {

@@ -1,7 +1,7 @@
 ul.contact-social {
     list-style: none;
     display: table;
-    margin: 5px 0;
+    margin: 5px 0 0 0;
     padding: 0;
 }
 
@@ -30,38 +30,8 @@ ul.contact-social li a {
     font-weight: normal;
     text-decoration: none;
     font-size: 14px;
-}
-
-ul.contact-social li a:hover {
-    color: #ccc;
-}
-
-ul.contact-social li a.instagram {
     display: table;
-    width: 26px;
-    height: 25px;
-    background-color: #FFF;
-    margin-top: 1px ;
-    border-radius: 3px;
-}
-
-ul.contact-social li a.instagram:hover {
-    background-color: #ccc;
-}
-
-ul.contact-social li a.instagram span{
-    display: table-cell;
-    margin: auto;
-    vertical-align: middle;
-}
-
-ul.contact-social li a.instagram i{
-    color: #FFF;
-    font-size: 22px;
-    line-height: 0.8;
-    display: block;
-    text-align: center;
-    margin-left: 1px;
+    line-height: 1;
 }
 
 ul.contact-social li a.phone span {
@@ -91,10 +61,6 @@ ul.contact-social li a span {
 
 .moduletable-sociais ul.contact-social li a {
     color: #FFF;
-}
-
-.moduletable-sociais ul.contact-social li a:hover {
-    color: #ccc;
 }
 
 #contact-social .certificado {

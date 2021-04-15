@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" version="1.7.0" method="upgrade">
+	<name>Mx Swiper</name>
+	<author>mixwebtemplates</author>
+	<creationDate>May 18, 2020</creationDate>
+	<copyright>Copyright (C) http://www.mixwebtemplates.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@mixwebtemplates.com</authorEmail>
+	<authorUrl>www.mixwebtemplates.com</authorUrl>
+	<version>4.0.0</version>	
+		<description>	
+	<![CDATA[<link href="../modules/mod_mx_swiper/assets/css/admin.css" rel="stylesheet" type="text/css" media="all" />
+	<h1>Mx Swiper</h1>
+	<div style="margin:0 0 0 10px; font-size:15px;">Mx Swiper Module free version from <a href="http://www.mixwebtemplates.com" target="_blank">mixwebtemplates.com</a>
+	The features in free verions are limited and is avaibale to load only custom items. Articles and k2 is available in the pro version.</div>
+	<h3>Userful links</h3>
+	<ul><li><a target='_blank' href='https://www.mixwebtemplates.com/joomla-templates'>Joomla templates</a></li>
+	<li><a target='_blank' href='https://www.mixwebtemplates.com/contact'>Report bug</a></li></ul>
+		]]></description>
+	
+	<files>
+		<filename module="mod_mx_swiper">mod_mx_swiper.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>field</folder>
+		<folder>tmpl</folder>
+	</files>
+	
+	<languages>
+		<language tag="en-GB">en-GB.mod_mx_swiper.ini</language>
+		<language tag="en-GB">en-GB.mod_mx_swiper.sys.ini</language>
+	</languages>
+	
+	<updateservers>
+  		<server type="extension" priority="1" name="Mx Swiper"><![CDATA[https://www.mixwebtemplates.com/updates/mod_mx_swiper.xml]]></server>
+  	</updateservers>
+	
+	<config>
+		<fields name="params">
+			
+			<fieldset name="CONTENT_GALLERY_IST_CON_EFFECTS_SETTINGS">
+				
+                <field name="styleh" type="combo" default="100vh" label="Slider Heigh" description="Slider Heigh in px. Example 450px">
+					<option value="100vh">100vh</option>
+					<option value="500px">500px</option>
+					<option value="600px">600px</option>
+					<option value="700px">700px</option>
+					<option value="800px">800px</option>
+					<option value="900px">900px</option>
+					<option value="1000px">1000px</option>
+				</field>
+                <field name="fadeslider" type="radio" class="btn-group" default="0" label="Fade slider" description="Fade slider on scroll down.">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+                <field name="sl_effect" type="list" default="fade" label="Slider Effect" description="Slider Effect">
+                    <option value="fade">Fade</option>
+                    <option value="slide">slide</option>
+                    <option value="coverflow">coverflow</option>
+                    <option value="flip">flip</option>
+                    <option value="cube">cube</option>
+                </field>
+				<field name="delay" type="number" default="3000" label="Read more link" description="Link for read more button" min="1000" step="100"/>
+                <field name="darklayer" type="radio" class="btn-group" default="0" label="Dark layer" description="Use Dark layer.">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+                <field name="sl_keyboard" type="radio" class="btn-group" default="1" label="Keyboard control" description="Use Keyboard control">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>	
+                <field name="navigation" type="radio" class="btn-group" default="0" label="Navegação" description="Botões navegação slide next e previous">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+				<field name="pagination" type="radio" class="btn-group" default="0" label="Paginação" description="Barras de navegação por slide">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+			</fieldset>
+			
+			<fieldset name="DataSource" label="MOD_MX_SWIPER_DATA_SOURCE">
+			
+				<field name="get_source" type="radio" class="btn-group btn-group-yesno"  filter="integer" default="1" label="Source" description="Select a source">					
+					<option value="0">K2</option>
+					<option value="1">Articles</option>
+					<option value="2">Custom Items</option>
+				</field>
+		<field name="ga_items" type="subform" formsource="modules/mod_mx_swiper/field/items.xml" class="advancedSelect" min="1" max="50" multiple="true" layout="joomla.form.field.subform.repeatable" groupByFieldset="true" label="Items(s)" description="Add Items(s) to display" showon="get_source:2" />
+	
+			<field label="Available only in the pro version" type="spacer" class="alert alert-blue" showon="get_source:0,1"/>			
+			  	<field 
+					name="source" 
+					type="list" 
+					default="k2_categories" 
+					label="MOD_MX_ISOTOPE_GALLERY_SOURCE_LABEL" 
+					description="MOD_MX_ISOTOPE_GALLERY_SOURCE_DESC" showon="get_source:0">
+        			<option value="k2_categories">MOD_MX_ISOTOPE_GALLERY_K2_CATEGORIES</option>
+	      			<option value="k2_articles">MOD_MX_ISOTOPE_GALLERY_K2_ARTICLES</option>
+        		</field>
+				
+				<field name="separator_1" type="separator" text="MOD_MX_ISOTOPE_GALLERY_DS_CATEGORY_SETTINGS" addfieldpath="/modules/mod_mx_swiper/assets/elements/"  showon="get_source:0" />
+      
+			  	<field 
+					name="catfilter" 
+					type="radio"
+					class="btn-group"
+					default="0" 
+					label="MOD_MX_ISOTOPE_GALLERY_K2_CATEGORY_FILTER_LABEL" 
+					description="MOD_MX_ISOTOPE_GALLERY_K2_CATEGORY_FILTER_DESC" showon="get_source:0">
+					<option value="0">K2_ALL</option>
+					<option value="1">K2_SELECT</option>
+				</field>
+			
+			  	<field 
+				  	name="category_id" 
+					type="categoriesmultiple" 
+					default="" 
+					label="MOD_MX_ISOTOPE_GALLERY_K2_CATEGORIES_LABEL" 
+					description="MOD_MX_ISOTOPE_GALLERY_K2_CATEGORIES_DESC" showon="get_source:0"
+				/>
+				
+				<field 
+				  	name="getChildren" 
+					type="radio"
+					class="btn-group"
+					default="0" 
+					label="MOD_MX_ISOTOPE_GALLERY_K2_FETCH_ITEMS_FROM_CHILDREN_CATEGORIES_LABEL" 
+					description="MOD_MX_ISOTOPE_GALLERY_K2_FETCH_ITEMS_FROM_CHILDREN_CATEGORIES_DESC" showon="get_source:0">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field 
+					name="itemCount" 
+					type="text" 
+					size="4" 
+					default="5" 
+					label="MOD_MX_SWIPER_FIELD_COUNT_LABEL" 
+					description="MOD_MX_SWIPER_FIELD_COUNT_DESC" showon="get_source:0"/>
+					
+				<field 
+					name="FeaturedItems" 
+					type="radio"
+					class="btn-group"
+					default="featured_show" 
+					label="MOD_MX_ISOTOPE_GALLERY_FEATURED_ITEMS_LABEL" 
+					description="MOD_MX_ISOTOPE_GALLERY_FEATURED_ITEMS_DESC" showon="get_source:0">
+    	    		<option value="0">MOD_MX_ISOTOPE_GALLERY_FEATURED_HIDE</option>
+				  	<option value="1">MOD_MX_ISOTOPE_GALLERY_FEATURED_SHOW</option>
+				  	<option value="2">MOD_MX_ISOTOPE_GALLERY_FEATURED_ONLY</option>
+        		</field>
+				
+				<field 
+					name="popularityRange" 
+					type="list" 
+					default="" 
+					label="MOD_MX_ISOTOPE_GALLERY_TIME_RANGE_LABEL" 
+					description="MOD_MX_ISOTOPE_GALLERY_TIME_RANGE_DESC" showon="get_source:0">
+					<option value="">MOD_MX_ISOTOPE_GALLERY_ALL_TIME</option>
+					<option value="1">MOD_MX_ISOTOPE_GALLERY_1_DAY</option>
+					<option value="3">MOD_MX_ISOTOPE_GALLERY_3_DAYS</option>
+					<option value="7">MOD_MX_ISOTOPE_GALLERY_1_WEEK</option>
+					<option value="15">MOD_MX_ISOTOPE_GALLERY_2_WEEKS</option>
+					<option value="30">MOD_MX_ISOTOPE_GALLERY_1_MONTH</option>
+					<option value="180">MOD_MX_ISOTOPE_GALLERY_6_MONTHS</option>
+				</field>
+				
+				<field
+				  	name="itemsOrdering"
+					type="list"
+					label="MOD_MX_ISOTOPE_GALLERY_ITEMS_ORDERING_LABEL"
+					description="MOD_MX_ISOTOPE_GALLERY_ITEMS_ORDERING_DESC" showon="get_source:0"
+					default=""
+				>
+		  	  		<option value="">MOD_MX_ISOTOPE_GALLERY_DEFAULT</option>
+					<option value="date">MOD_MX_ISOTOPE_GALLERY_OLDEST_FIRST</option>
+					<option value="rdate">MOD_MX_ISOTOPE_GALLERY_MOST_RECENT_FIRST</option>
+					<option value="publishUp">MOD_MX_ISOTOPE_GALLERY_RECENTLY_PUBLISHED</option>
+					<option value="alpha">MOD_MX_ISOTOPE_GALLERY_TITLE_ALPHABETICAL</option>
+					<option value="ralpha">MOD_MX_ISOTOPE_GALLERY_TITLE_REVERSE_ALPHABETICAL</option>
+					<option value="order">MOD_MX_ISOTOPE_GALLERY_ORDERING</option>
+					<option value="rorder">MOD_MX_ISOTOPE_GALLERY_ORDERING_REVERSE</option>
+					<option value="hits">MOD_MX_ISOTOPE_GALLERY_MOST_POPULAR</option>
+					<option value="best">MOD_MX_ISOTOPE_GALLERY_HIGHEST_RATED</option>
+					<option value="comments">MOD_MX_ISOTOPE_GALLERY_MOST_COMMENTED</option>
+					<option value="modified">MOD_MX_ISOTOPE_GALLERY_LATEST_MODIFIED</option>
+					<option value="rand">MOD_MX_ISOTOPE_GALLERY_RANDOM_ORDERING</option>
+				</field>
+				
+			
+
+				<field 
+                    name="categoryFilter" 
+                    type="radio" 
+                    default="0" 
+					class="btn-group btn-group-yesno"
+                    label="MOD_MX_ISOTOPE_GALLERY_K2_CATEGORY_FILTER_LABEL" 
+                    description="MOD_MX_ISOTOPE_GALLERY_K2_CATEGORY_FILTER_DESC" showon="get_source:0">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				
+				<field name="separator_2" type="separator" text="Custom items" showon="get_source:0" />
+       
+			  	<field 
+					name="k2_items" 
+					type="k2modalselector" 
+					scope="items" 
+					default="" 
+					label="MOD_MX_ISOTOPE_GALLERY_K2_ADD_ITEMS_LABEL" 
+					description="MOD_MX_ISOTOPE_GALLERY_K2_ADD_ITEMS_DESC" showon="get_source:0"				
+				/>
+
+				
+                
+				<field name="separator_st6"  type="separator" text="MOD_MX_ISOTOPE_GALLERY_DS_ITEMS_SETTINGS"  showon="get_source:0" />	
+
+				<field 
+					name="itemImgSize" 
+					type="list" 
+					default="Medium" 
+					label="MOD_MX_ISOTOPE_GALLERY_K2_IMAGE_SIZE" 
+					description="MOD_MX_ISOTOPE_GALLERY_K2_IMAGE_SIZE_DESC" showon="get_source:0">
+						<option value="XSmall">XSmall</option>
+						<option value="Small">Small</option>
+						<option value="Medium">Medium</option>
+						<option value="Large">Large</option>
+						<option value="XLarge">XLarge</option>
+                </field>
+        								
+				
+				<field name="separator_cat"  type="separator" text="Category settings"  showon="get_source:1" />		
+						
+				
+				<field 
+					name="count"
+					type="text" 
+					default="5"
+					label="MOD_MX_SWIPER_FIELD_COUNT_LABEL"
+					description="MOD_MX_SWIPER_FIELD_COUNT_DESC"  showon="get_source:1"
+				/>
+					  
+				<field 
+					name="image_type" 
+					type="radio" 
+					class="btn-group"
+					default="inline" 
+					label="MOD_MX_SWIPER_IMAGE_TYPE_LABEL" 
+					description="MOD_MX_SWIPER_IMAGE_TYPE_DESC" showon="get_source:1"
+				>
+					<option value="introtext">Intro Image</option>
+					<option value="fulltext">Fulltext Image</option>
+					<option value="inline">Inline Image</option>
+				</field>
+			
+				<field 
+					name="category_filtering_type" 
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="MOD_MX_SWIPER_FIELD_CATFILTERINGTYPE_LABEL"
+					description="MOD_MX_SWIPER_FIELD_CATFILTERINGTYPE_DESC" showon="get_source:1"
+				>
+						<option value="1">MOD_MX_SWIPER_CATEGORY_OPTION_INCLUSIVE_VALUE</option>
+						<option value="0">MOD_MX_SWIPER_CATEGORY_OPTION_EXCLUSIVE_VALUE</option>
+				</field>
+
+				<field 
+					name="catid" 
+					type="category" 
+					extension="com_content"
+					multiple="true" size="5"
+					label="JCATEGORY"
+					description="MOD_MX_SWIPER_FIELD_CATEGORY_DESC" showon="get_source:1"
+				>
+						<option value="">JOPTION_ALL_CATEGORIES</option>
+				</field>
+
+				<field name="show_child_category_articles" 
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="MOD_MX_SWIPER_FIELD_SHOWCHILDCATEGORYARTICLES_LABEL"
+					description="MOD_MX_SWIPER_FIELD_SHOWCHILDCATEGORYARTICLES_DESC" showon="get_source:1"
+				>
+						<option value="1">MOD_MX_SWIPER_CATEGORY_OPTION_INCLUDE_VALUE</option>
+						<option value="0">MOD_MX_SWIPER_CATEGORY_OPTION_EXCLUDE_VALUE</option>
+				</field>
+
+				<field 
+					name="levels" 
+					type="text" 
+					default="1"
+					label="MOD_MX_SWIPER_FIELD_CATDEPTH_LABEL"
+					description="MOD_MX_SWIPER_FIELD_CATDEPTH_DESC"  showon="get_source:1"
+				/>
+				
+				<field name="separator_It"  type="separator" text="Items Settings"  showon="get_source:1" />	
+				
+				<field 
+					name="slider_title" 
+					type="radio"
+					class="btn-group" 
+					default="1" 
+					label="MOD_MX_SWIPER_TITLE_LABEL" 
+					description="MOD_MX_SWIPER_TITLE_DESC" showon="get_source:0,1"
+				>
+					  <option value="0">JNO</option>
+					  <option value="1">JYES</option>
+    		   </field>
+			   
+				<field 
+					name="title_limit" 
+					type="text" 
+					default="3" 
+					label="MOD_MX_SWIPER_TITLE_LIMIT_LABEL" 
+					description="MOD_MX_SWIPER_TITLE_LIMIT_DESC" showon="get_source:1"
+				/> 
+				
+				<field
+					name="slider_introtext" 
+					type="radio"
+					class="btn-group" 
+					default="1" 
+					label="MOD_MX_SWIPER_INTROTEXT_LABEL" 
+					description="MOD_MX_SWIPER_INTROTEXT_DESC" showon="get_source:0,1"
+				>
+          			<option value="0">JNO</option>
+	      			<option value="1">JYES</option>
+        		</field>
+				
+				<field 
+			    	name="slider_introtext_limit" 
+					type="text" 
+					default="15" 
+					label="MOD_MX_SWIPER_INTROTEXT_LIMIT_LABEL" 
+					description="MOD_MX_SWIPER_INTROTEXT_LIMIT_DESC" showon="get_source:0,1"
+			  	/>
+				
+				<field 
+					name="strip_tags" 
+					type="radio"
+					class="btn-group"
+					default="1" 
+					label="MOD_MX_SWIPER_STRIP_HTML_LABEL" 
+					description="MOD_MX_SWIPER_STRIP_HTML_DESC" showon="get_source:1">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field 
+					name="allowplugins" 
+					type="radio"
+					class="btn-group"
+					default="1" 
+					label="MOD_MX_SWIPER_ALLOW_PLUGINS_LABEL" 
+					description="MOD_MX_SWIPER_ALLOW_PLUGINS_DESC" showon="get_source:1">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			
+				<field 
+					name="slider_date" 
+					type="radio" 
+					class="btn-group"
+					default="0" 
+					label="MOD_MX_SWIPER_DATE_LABEL" 
+					description="MOD_MX_SWIPER_DATE_DESC" showon="get_source:0,1"
+				>
+				        <option value="0">JNO</option>
+	      				<option value="1">JYES</option>
+        		</field>
+				
+				<field 
+					name="slider_category" 
+					type="radio"
+					class="btn-group"
+					default="0" 
+					label="MOD_MX_SWIPER_CATEGORY_LABEL" 
+					description="MOD_MX_SWIPER_CATEGORY_DESC" showon="get_source:0,1"
+				>
+					  <option value="0">JNO</option>
+					  <option value="1">JYES</option>
+        		</field>
+				
+				<field 
+					name="slider_author" 
+					type="radio"
+					class="btn-group" 
+					default="0" 
+					label="MOD_MX_SWIPER_AUTHOR_LABEL" 
+					description="MOD_MX_SWIPER_AUTHOR_DESC" showon="get_source:0,1"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+        		</field>
+				<field 
+					name="slider_read" 
+					type="radio" 
+					class="btn-group"
+					default="0" 
+					label="Show read more" 
+					description="Show read more" showon="get_source:0,1"
+				>
+				        <option value="0">JNO</option>
+	      				<option value="1">JYES</option>
+        		</field>
+        		
+				<field name="separator_tgs"  type="separator" text="Tags"  showon="get_source:1" />	
+				
+				<field 
+					name="tag_filtering_type" 
+					type="radio"
+					default="1"
+					class="btn-group"
+					label="MOD_MX_SWIPER_FIELD_TAG_FILTERING_TYPE_LABEL"
+					description="MOD_MX_SWIPER_FIELD_TAG_FILTERING_TYPE_DESC" showon="get_source:1"
+				>
+					<option value="1">MOD_MX_SWIPER_CATEGORY_OPTION_INCLUSIVE_VALUE</option>
+					<option value="0">MOD_MX_SWIPER_CATEGORY_OPTION_EXCLUSIVE_VALUE</option>
+				</field>
+				
+				<field 
+					name="tag_id" 
+					type="tag" 
+					label="MOD_MX_SWIPER_FIELD_TAG_LABEL"
+					description="MOD_MX_SWIPER_FIELD_TAG_DESC"
+					custom="deny"
+					multiple="true" showon="get_source:1"
+				/>
+				
+				<field 
+					name="tag_include_children" 
+					type="radio"
+					class="btn-group"
+					label="MOD_MX_SWIPER_FIELD_TAG_INCLUDE_CHILDREN_LABEL"
+					description="MOD_MX_SWIPER_FIELD_TAG_INCLUDE_CHILDREN_DESC"
+					default="1" showon="get_source:1"
+				>
+					<option value="1">MOD_MX_SWIPER_CATEGORY_OPTION_INCLUDE_VALUE</option>
+					<option value="0">MOD_MX_SWIPER_CATEGORY_OPTION_EXCLUDE_VALUE</option>
+				</field>	
+				
+				<field 
+					name="tag_match" 
+					type="radio"
+					class="btn-group"
+					label="MOD_MX_SWIPER_FIELD_TAG_MATCH_LABEL"
+					description="MOD_MX_SWIPER_FIELD_TAG_MATCH_DESC"
+					default="1" showon="get_source:1"
+				>
+					<option value="1">MOD_MX_SWIPER_TAG_MATCH_ANY</option>
+					<option value="0">MOD_MX_SWIPER_TAG_MATCH_ALL</option>
+				</field>	
+
+				<field name="separator_aut"  type="separator" text="Author"  showon="get_source:1" />	
+
+				<field 
+					name="author_filtering_type" 
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="MOD_MX_SWIPER_FIELD_AUTHORFILTERING_LABEL"
+					description="MOD_MX_SWIPER_FIELD_AUTHORFILTERING_DESC" showon="get_source:1"
+				>
+					<option value="1">MOD_MX_SWIPER_CATEGORY_OPTION_INCLUSIVE_VALUE</option>
+					<option value="0">MOD_MX_SWIPER_CATEGORY_OPTION_EXCLUSIVE_VALUE</option>
+				</field>
+
+				<field 
+					name="created_by" 
+					type="sql"
+					multiple="true" 
+					size="5"
+					label="MOD_MX_SWIPER_FIELD_AUTHOR_LABEL"
+					description="MOD_MX_SWIPER_FIELD_AUTHOR_DESC"
+					query="select id, name, username from #__users where id IN (select distinct(created_by) from #__content) order by name ASC"
+					key_field="id" 
+					value_field="name" showon="get_source:1"
+				>
+						<option value="">JOPTION_SELECT_AUTHORS</option>
+				</field>
+
+				<field 
+					name="author_alias_filtering_type" 
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="MOD_MX_SWIPER_FIELD_AUTHORALIASFILTERING_LABEL"
+					description="MOD_MX_SWIPER_FIELD_AUTHORALIASFILTERING_DESC" showon="get_source:1"
+				>
+						<option value="1">MOD_MX_SWIPER_CATEGORY_OPTION_INCLUSIVE_VALUE</option>
+						<option value="0">MOD_MX_SWIPER_CATEGORY_OPTION_EXCLUSIVE_VALUE</option>
+				</field>
+
+				<field 
+					name="created_by_alias" 
+					type="sql"
+					multiple="true" 
+					size="5"
+					label="MOD_MX_SWIPER_FIELD_AUTHORALIAS_LABEL"
+					description="MOD_MX_SWIPER_FIELD_AUTHORALIAS_DESC"
+					query="select distinct(created_by_alias) from #__content where created_by_alias != '' order by created_by_alias ASC"
+					key_field="created_by_alias" 
+					value_field="created_by_alias" showon="get_source:1"
+				>
+						<option value="">JOPTION_SELECT_AUTHOR_ALIASES</option>
+				</field>
+
+				<field name="separator_fea"  type="separator" text="Feature"  showon="get_source:1" />	
+				
+				<field 
+					name="show_front" 
+					type="radio"
+					class="btn-group" 
+					default="show"
+					label="MOD_MX_SWIPER_FIELD_SHOWFEATURED_LABEL"
+					description="MOD_MX_SWIPER_FIELD_SHOWFEATURED_DESC" showon="get_source:1"
+				>
+					<option value="show">JSHOW</option>
+					<option value="hide">JHIDE</option>
+					<option value="only">MOD_MX_SWIPER_CATEGORY_OPTION_ONLYFEATURED_VALUE</option>
+				</field>
+				
+				<field name="separator_dat"  type="separator" text="Ddte filtering"  showon="get_source:1" />	
+				
+				<field 
+					name="date_filtering" 
+					type="radio"
+					class="btn-group" 
+					default="off"
+					label="MOD_MX_SWIPER_FIELD_DATEFILTERING_LABEL"
+					description="MOD_MX_SWIPER_FIELD_DATEFILTERING_DESC" showon="get_source:1"
+				>
+						<option value="off">MOD_MX_SWIPER_CATEGORY_OPTION_OFF_VALUE</option>
+						<option value="range">MOD_MX_SWIPER_CATEGORY_OPTION_DATERANGE_VALUE</option>
+						<option value="relative">MOD_MX_SWIPER_CATEGORY_OPTION_RELATIVEDAY_VALUE</option>
+				</field>
+
+				<field 
+					name="date_field" 
+					type="radio"
+					class="btn-group"
+					default="a.created"
+					label="MOD_MX_SWIPER_FIELD_DATERANGEFIELD_LABEL"
+					description="MOD_MX_SWIPER_FIELD_DATERANGEFIELD_DESC" showon="get_source:1"
+				>
+					<option value="a.created">MOD_MX_SWIPER_CATEGORY_OPTION_CREATED_VALUE</option>
+					<option value="a.modified">MOD_MX_SWIPER_CATEGORY_OPTION_MODIFIED_VALUE</option>
+					<option value="a.publish_up">MOD_MX_SWIPER_CATEGORY_OPTION_STARTPUBLISHING_VALUE</option>
+				</field>
+
+				<field 
+					name="start_date_range" 
+					type="calendar"
+					format="%Y-%m-%d %H:%M:%S"
+					label="MOD_MX_SWIPER_FIELD_STARTDATE_LABEL"
+					description="MOD_MX_SWIPER_FIELD_STARTDATE_DESC" showon="get_source:1"
+					size="22"
+					filter="user_utc" 
+				/>
+
+				<field 
+					name="end_date_range" 
+					type="calendar"
+					format="%Y-%m-%d %H:%M:%S"
+					label="MOD_MX_SWIPER_FIELD_ENDDATE_LABEL"
+					description="MOD_MX_SWIPER_FIELD_ENDDATE_DESC" showon="get_source:1"
+					size="22"
+					filter="user_utc" 
+				/>
+
+				<field 
+					name="relative_date" 
+					type="text" 
+					default="30"
+					label="MOD_MX_SWIPER_FIELD_RELATIVEDATE_LABEL"
+					description="MOD_MX_SWIPER_FIELD_RELATIVEDATE_DESC"  showon="get_source:1"
+				/>
+			
+			
+				<field 
+					name="show_date_field" 
+					type="radio"
+					class="btn-group" 
+					default="created"
+					label="MOD_MX_SWIPER_FIELD_DATEFIELD_LABEL"
+					description="MOD_MX_SWIPER_FIELD_DATEFIELD_DESC" showon="get_source:1"
+				>
+					<option value="created">MOD_MX_SWIPER_CATEGORY_OPTION_CREATED_VALUE</option>
+					<option value="modified">MOD_MX_SWIPER_CATEGORY_OPTION_MODIFIED_VALUE</option>
+					<option value="publish_up">MOD_MX_SWIPER_CATEGORY_OPTION_STARTPUBLISHING_VALUE</option>
+				</field>
+
+				<field 
+					name="show_date_format" 
+					type="text"
+					default="Y-m-d H:i:s"
+					label="MOD_MX_SWIPER_FIELD_DATEFIELDFORMAT_LABEL"
+					description="MOD_MX_SWIPER_FIELD_DATEFIELDFORMAT_DESC"  showon="get_source:1"
+				/>
+					
+				<field name="separator_exc"  type="separator" text="Excluded articles"  showon="get_source:1" />	
+
+				<field 
+					name="excluded_articles" 
+					type="textarea"
+					cols="10" 
+					rows="3"
+					label="MOD_MX_SWIPER_FIELD_EXCLUDEDARTICLES_LABEL"
+					description="MOD_MX_SWIPER_FIELD_EXCLUDEDARTICLES_DESC"  showon="get_source:1"
+				/>
+
+				<field name="separator_arc"  type="separator" text="Article ordering"  showon="get_source:1" />	
+																															
+					<field 
+						name="article_ordering" 
+						type="list"
+						default="a.title"
+						label="MOD_MX_SWIPER_FIELD_ARTICLEORDERING_LABEL"
+						description="MOD_MX_SWIPER_FIELD_ARTICLEORDERING_DESC" showon="get_source:1"
+				>
+							<option value="a.ordering">MOD_MX_SWIPER_CATEGORY_OPTION_ORDERING_VALUE</option>
+							<option value="fp.ordering">MOD_MX_SWIPER_CATEGORY_OPTION_ORDERINGFEATURED_VALUE</option>
+							<option value="a.hits">MOD_MX_SWIPER_CATEGORY_OPTION_HITS_VALUE</option>
+							<option value="a.title">JGLOBAL_TITLE</option>
+							<option value="a.id">MOD_MX_SWIPER_CATEGORY_OPTION_ID_VALUE</option>
+							<option value="a.alias">JFIELD_ALIAS_LABEL</option>
+							<option value="a.created">MOD_MX_SWIPER_CATEGORY_OPTION_CREATED_VALUE</option>
+							<option value="modified">MOD_MX_SWIPER_CATEGORY_OPTION_MODIFIED_VALUE</option>
+							<option value="publish_up">MOD_MX_SWIPER_CATEGORY_OPTION_STARTPUBLISHING_VALUE</option>
+							<option value="a.publish_down">MOD_MX_SWIPER_CATEGORY_OPTION_FINISHPUBLISHING_VALUE</option>
+				</field>
+
+				<field 
+					name="article_ordering_direction" 
+					type="radio"
+					class="btn-group"
+					default="ASC"
+					label="MOD_MX_SWIPER_FIELD_ARTICLEORDERINGDIR_LABEL"
+					description="MOD_MX_SWIPER_FIELD_ARTICLEORDERINGDIR_DESC" showon="get_source:1"
+				>
+						<option value="DESC">MOD_MX_SWIPER_CATEGORY_OPTION_DESCENDING_VALUE</option>
+						<option value="ASC">MOD_MX_SWIPER_CATEGORY_OPTION_ASCENDING_VALUE</option>
+				</field>
+							
+			</fieldset>		
+	
+	
+			<fieldset name="advanced">
+				
+				<field 
+					name="enable_cache" 
+					type="radio"
+					class="btn-group"
+					default="0" 
+					label="MOD_MX_SWIPER_CACHING_LABEL" 
+					description="MOD_MX_SWIPER_CACHING_DESC"
+				>
+						<option value="1">Use global</option>
+						<option value="0">No caching</option>
+				</field>
+        
+				<field 
+					name="cache_time" 
+					type="text" 
+					default="30" 
+					label="MOD_MX_SWIPER_CACHE_TIME_LABEL" 
+					description="MOD_MX_SWIPER_CACHE_TIME_DESC" 
+				/>
+			
+			</fieldset>
+			
+		</fields>
+	</config>
+	
+</extension>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+        type="module"
+        version="3"
+        client="site"
+        method="upgrade">
+    <name>mod_button</name>
+    <author>Wanderson Alves</author>
+    <creationDate>February 2021</creationDate>
+    <copyright>Copyright (C) - 2021 - Sdrummond Soluções em Tecnologia. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>wanderson@sdrummond.com.br</authorEmail>
+    <authorUrl>www.sdrummond.com.br</authorUrl>
+    <version>1.0.0</version>
+    <description>MOD_BUTTON_XML_DESCRIPTION</description>
+    <files>
+        <filename module="mod_button">mod_button.php</filename>
+        <folder>tmpl</folder>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <filename>mod_button.xml</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+					name="type_image"
+					type="radio"
+					label="Tipo de imagem"
+					class="btn-group btn-group-yesno"
+					default="no_image"
+					>
+                    <option value="no_image">Sem Imagem</option>
+					<option value="icon">Icone</option>
+					<option value="image">Imagem</option>
+				</field>
+                <field name="image" type="media" default="" label="Imagem" size="30" directory="button" showon="type_image:image"/>
+                <field name="icon" type="text" default="" label="Icone" size="30"  showon="type_image:icon"/>
+                <field name="title" type="text" default="" label="Título"/>
+                <field name="class_button" type="text" default="" label="Classe do botão"/>
+                <field
+					name="type_link"
+					type="radio"
+					label="Tipo de link"
+					class="btn-group btn-group-yesno"
+					default="menu_item"
+					>
+					<option value="menu_item">Item do Menu</option>
+					<option value="external_url">URL Externa</option>
+				</field>
+                <field name="menu" type="menuitem" label="Link" filter="integer" showon="type_link:menu_item"/>
+                <field name="external_url" type="url" label="URL Externa" showon="type_link:external_url"/>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

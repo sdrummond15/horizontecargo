@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+        type="module"
+        version="3"
+        client="site"
+        method="upgrade">
+    <name>mod_services</name>
+    <author>Wanderson Alves</author>
+    <creationDate>February 2017</creationDate>
+    <copyright>Copyright (C) - 2017 - Sdrummond Soluções em Tecnologia. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>wanderson@sdrummond.com.br</authorEmail>
+    <authorUrl>www.sdrummond.com.br</authorUrl>
+    <version>1.0.0</version>
+    <description>MOD_SERVICES_XML_DESCRIPTION</description>
+    <files>
+        <filename module="mod_services">mod_services.php</filename>
+        <folder>tmpl</folder>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <filename>mod_services.xml</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="items" type="subform" formsource="modules/mod_services/field/items.xml" class="advancedSelect" min="1" max="50" multiple="true" layout="joomla.form.field.subform.repeatable" groupByFieldset="true" label="Items(s)" description="Add Items(s) to display" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

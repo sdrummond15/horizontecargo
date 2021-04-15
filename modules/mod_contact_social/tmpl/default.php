@@ -24,11 +24,11 @@
         //WhatsApp
         if (!empty($whatsapp)) :
         ?>
-                <li>
-                    <a href="https://api.whatsapp.com/send?phone=+55<?php echo $whatsappNumber; ?><?php if (!empty($whatsapp_msg)) echo '&text=' . $whatsapp_msg; ?>" target="_blank" class="">
-                        <i class="fab fa-whatsapp-square"></i>
-                    </a>
-                </li>
+            <li>
+                <a href="https://api.whatsapp.com/send?phone=+55<?php echo $whatsappNumber; ?><?php if (!empty($whatsapp_msg)) echo '&text=' . $whatsapp_msg; ?>" target="_blank" class="">
+                    <i class="fab fa-whatsapp-square"></i>
+                </a>
+            </li>
         <?php
         endif;
         ?>
@@ -69,7 +69,7 @@
             <li>
                 <a href="<?php echo $instagram; ?>" target="_blank" class="instagram">
                     <span>
-                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-instagram-square"></i>
                     </span>
                 </a>
             </li>

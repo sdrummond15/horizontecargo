@@ -3,13 +3,16 @@ jQuery(document).ready(function ($) {
     var topo = $(window).scrollTop();
     if(topo >= 90){
         $('#header_wrap').css('background-color', '#FFF');
-        $('#search_wrap').css('border-bottom', '1px solid #341e11');
-        $('#topmenu a, #topmenu li.active a, #topmenu li.active a:hover').css('color', '#341e11');
-        if (!$('#topmenu a').hasClass('border-brown')) {
-            $('#topmenu a').addClass('border-brown');
+        if ($('#logo').hasClass('white')) {
+            $('#logo').removeClass('white');
         }
-        if (!$('ul.contact-social li a').hasClass('color-brown')) {
-            $('ul.contact-social li a').addClass('color-brown');
+        $('#topmenu a, #topmenu li.active a, #topmenu li.active a:hover, #topmenu span, #topmenu li.active span, #topmenu li.active span:hover').css('color', '#504f51');
+        $('#topmenu li ul').css('background-color', '#FFF');
+        if (!$('#topmenu a').hasClass('border-grey')) {
+            $('#topmenu a').addClass('border-grey');
+        }
+        if (!$('ul.contact-social li a').hasClass('color-blue')) {
+            $('ul.contact-social li a').addClass('color-blue');
         }
     }
     
@@ -20,23 +23,40 @@ jQuery(document).ready(function ($) {
             
             if (scrollTop >= 90) {
                 $('#header_wrap').css('background-color', '#FFF');
-                $('#search_wrap').css('border-bottom', '1px solid #341e11');
-                $('#topmenu a, #topmenu li.active a, #topmenu li.active a:hover').css('color', '#341e11');
-                if (!$('#topmenu a').hasClass('border-brown')) {
-                    $('#topmenu a').addClass('border-brown');
+                if ($('#logo').hasClass('white')) {
+                    $('#logo').removeClass('white');
                 }
-                if (!$('ul.contact-social li a').hasClass('color-brown')) {
-                    $('ul.contact-social li a').addClass('color-brown');
+                $('#topmenu a, #topmenu li.active a, #topmenu li.active a:hover, #topmenu span, #topmenu li.active span, #topmenu li.active span:hover').css('color', '#504f51');
+                $('#topmenu li ul').css('background-color', '#FFF');
+                if (!$('#topmenu a').hasClass('border-grey')) {
+                    $('#topmenu a').addClass('border-grey');
                 }
+                if (!$('ul.contact-social li a').hasClass('color-blue')) {
+                    $('ul.contact-social li a').addClass('color-blue');
+                }
+
+                if (!$('.btn.btn-cotacao').hasClass('border-blue')) {
+                    $('.btn.btn-cotacao').addClass('border-blue');
+                    $('.btn.btn-cotacao').addClass('color-blue');
+                }
+
             } else {
-                $('#header_wrap').css('background-color', 'transparent');
-                $('#search_wrap').css('border-bottom', '1px solid #FFF');
-                $('#topmenu a, #topmenu li.active a, #topmenu li.active a:hover').css('color', '#FFF');
-                if ($('#topmenu a').hasClass('border-brown')) {
-                    $('#topmenu a').removeClass('border-brown');
+                $('#header_wrap').css('background-color', 'rgba(0,0,0,0.5)');
+                if (!$('#logo').hasClass('white')) {
+                    $('#logo').addClass('white');
                 }
-                if ($('ul.contact-social li a').hasClass('color-brown')) {
-                    $('ul.contact-social li a').removeClass('color-brown');
+                $('#topmenu a, #topmenu li.active a, #topmenu li.active a:hover, #topmenu span, #topmenu li.active span, #topmenu li.active span:hover').css('color', '#FFF');
+                $('#topmenu li ul').css('background-color', 'transparent');
+                if ($('#topmenu a').hasClass('border-blue')) {
+                    $('#topmenu a').removeClass('border-blue');
+                }
+                if ($('ul.contact-social li a').hasClass('color-blue')) {
+                    $('ul.contact-social li a').removeClass('color-blue');
+                }
+
+                if ($('.btn.btn-cotacao').hasClass('border-blue')) {
+                    $('.btn.btn-cotacao').removeClass('border-blue');
+                    $('.btn.btn-cotacao').removeClass('color-blue');
                 }
             }
         });

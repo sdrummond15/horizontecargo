@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset name="image_modal" class="image-subform">
+		<field name="ol_image" type="media" default="" label="Slider Image"  description="Choose an image..." size="30" />
+		<field name="ol_title" type="text" size="100" default="" label="Title" description="Title" />
+		<field name="ol_text" type="text" size="100" default="" label="Main text" description="Main text" />
+		<field name="ol_info" type="text" size="100" default="" label="Info" description="Info" />
+		<field name="ol_target_url" type="text" default="" label="Read more link" description="Link for read more button" />
+		<field name="position" type="radio" class="btn-group" default="L" label="Posição" description="Posição do texto no banner">
+			<option value="L">Esquerda</option>
+			<option value="R">Direita</option>
+		</field>
+	</fieldset>
+</form>
+
