@@ -77,7 +77,7 @@ if ($params->get('moduleclass_sfx')) {
             <li>
                 <a href="<?php echo $instagram; ?>" target="_blank" class="instagram">
                     <span>
-                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-instagram-square"></i>
                     </span>
                 </a>
             </li>

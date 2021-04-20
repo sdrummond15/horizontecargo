@@ -20,7 +20,7 @@ $sitedescription = $this->params->get('sitedescription');
 $app = JFactory::getApplication();
 $menu = $app->getMenu();
 $lang = JFactory::getLanguage();
-$home = $menu->getActive() == $menu->getDefault($lang->getTag());
+$home = boolval($menu->getActive() == $menu->getDefault($lang->getTag()));
 
 $w = 'w3';
 if ($LeftMenuOn and $RightMenuOn) {
@@ -40,6 +40,7 @@ if ($LeftMenuOn and $RightMenuOn) {
     <link rel="stylesheet" href="<?= $this->baseurl ?>/templates/<?= $this->template; ?>/css/fontawesome-all.min.css" type="text/css" />
     <link rel="stylesheet" href="<?= $this->baseurl ?>/templates/<?= $this->template; ?>/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="<?= $this->baseurl ?>/templates/<?= $this->template; ?>/css/template.css" type="text/css" />
+    <script type="text/javascript" >const home = '<?= $home ?>';</script>
     <script type="text/javascript" src="<?= $this->baseurl ?>/templates/<?= $this->template; ?>/js/sfhover.js"></script>
     <script type="text/javascript" src="<?= $this->baseurl ?>/templates/<?= $this->template; ?>/js/jquery-1.11.3.js"></script>
     <script type="text/javascript" src="<?= $this->baseurl ?>/templates/<?= $this->template; ?>/js/bootstrap.min.js"></script>
@@ -167,7 +168,9 @@ if ($LeftMenuOn and $RightMenuOn) {
         <!-- Footer -->
         <?php if ($this->countModules('position-14')) : ?>
             <div id="footer_wrap">
-                <jdoc:include type="modules" name="position-14" />
+                <div class="footer">
+                    <jdoc:include type="modules" name="position-14" style="xhtml" />
+                </div>
             </div>
         <?php endif; ?>
 
@@ -201,12 +204,10 @@ if ($LeftMenuOn and $RightMenuOn) {
                     <div class="copyrightint">
                         Copyright &copy;<?= date('Y'); ?>
                         <strong><?= $sitename; ?></strong> - Todos os direitos reservados
+                        <a href="http://www.sdrummond.com.br" title="Sdrummond Tecnologia" class="sd">
+                            <img src="images/sd.png" alt="Sdrummond Tecnologia" title="Sdrummond Tecnologia" />
+                        </a>
                     </div>
-                </div>
-                <div class="sd">
-                    <a href="http://www.sdrummond.com.br" title="Sdrummond Tecnologia">
-                        <img src="images/sd.png" alt="Sdrummond Tecnologia" title="Sdrummond Tecnologia" />
-                    </a>
                 </div>
             </div>
         </div>

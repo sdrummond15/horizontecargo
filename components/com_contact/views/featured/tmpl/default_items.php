@@ -3,16 +3,18 @@
  * @package     Joomla.Site
  * @subpackage  com_contact
  *
- * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('_JEXEC') or die;
-JHtml::_('behavior.core');
+JHtml::_('behavior.framework');
 
-$listOrder = $this->escape($this->state->get('list.ordering'));
-$listDirn  = $this->escape($this->state->get('list.direction'));
+$listOrder	= $this->escape($this->state->get('list.ordering'));
+$listDirn	= $this->escape($this->state->get('list.direction'));
 
+// Create a shortcut for params.
+$params = &$this->item->params;
 ?>
 
 <?php if (empty($this->items)) : ?>
@@ -93,7 +95,7 @@ $listDirn  = $this->escape($this->state->get('list.direction'));
 
 		<tbody>
 			<?php foreach ($this->items as $i => $item) : ?>
-				<tr class="<?php echo ($i % 2) ? 'odd' : 'even'; ?>" itemscope itemtype="https://schema.org/Person">
+				<tr class="<?php echo ($i % 2) ? "odd" : "even"; ?>" itemscope itemtype="http://schema.org/Person">
 					<td class="item-num">
 						<?php echo $i; ?>
 					</td>
@@ -138,19 +140,19 @@ $listDirn  = $this->escape($this->state->get('list.direction'));
 					<?php endif; ?>
 
 					<?php if ($this->params->get('show_suburb_headings')) : ?>
-						<td class="item-suburb" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+						<td class="item-suburb" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 							<span itemprop="addressLocality"><?php echo $item->suburb; ?></span>
 						</td>
 					<?php endif; ?>
 
 					<?php if ($this->params->get('show_state_headings')) : ?>
-						<td class="item-state" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+						<td class="item-state" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 							<span itemprop="addressRegion"><?php echo $item->state; ?></span>
 						</td>
 					<?php endif; ?>
 
 					<?php if ($this->params->get('show_country_headings')) : ?>
-						<td class="item-state" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+						<td class="item-state" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 							<span itemprop="addressCountry"><?php echo $item->country; ?></span>
 						</td>
 					<?php endif; ?>

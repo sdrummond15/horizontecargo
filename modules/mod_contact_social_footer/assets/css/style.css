@@ -1,6 +1,4 @@
-#contact-social-footer {
-
-}
+#contact-social-footer {}
 
 .logo-footer {
     display: table;
@@ -18,21 +16,18 @@
     text-align: center;
 }
 
-#contact-social-footer p a {
+#contact-social-footer a, #contact-social-footer p a {
     text-decoration: none;
     color: #FFF;
 }
 
-#contact-social-footer p a:hover {
+#contact-social-footer a:hover, #contact-social-footer p a:hover {
     color: #a1c9e1;
 }
 
-#contact-social-footer p a.phone-footer {
+#contact-social-footer .phone, #contact-social-footer .email {
     font-size: 24px;
-}
-
-#contact-social-footer p a.email-txt-footer {
-    font-size: 24px;
+    text-align: center;
 }
 
 ul.contact-social-footer {
@@ -57,7 +52,6 @@ ul.contact-social-footer.footer-contato li a {
 }
 
 ul.contact-social-footer li {
-    display: table;
     float: left;
     padding: 0 3px;
 }
@@ -70,43 +64,9 @@ ul.contact-social-footer li a {
 
 ul.contact-social-footer li a:hover {
     color: #e8e8e8;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
 
 ul.contact-social-footer li a i {
     font-size: 36px;
     vertical-align: sub;
-}
-
-ul.contact-social-footer li a span {
-    margin-left: 10px;
-}
-
-ul.contact-social-footer li a.instagram {
-    display: table;
-    width: 32px;
-    height: 32px;
-    background-color: #FFF;
-    margin-top: 1px ;
-    border-radius: 3px;
-}
-
-ul.contact-social-footer li a.instagram:hover {
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
-    background-color: #e8e8e8;
-}
-
-ul.contact-social-footer li a.instagram span{
-    display: table-cell;
-    margin: auto;
-    vertical-align: middle;
-}
-
-ul.contact-social-footer li a.instagram i{
-    color: #d28501;
-    font-size: 26px;
-    line-height: 0.8;
-    display: block;
-    text-align: center;
-    margin-top: 2px;
 }

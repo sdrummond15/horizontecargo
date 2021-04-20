@@ -1,0 +1,67 @@
+#banner-int {
+    width: 100%;
+    display: table;
+    background: url("../../../../images/banners/banner_horizonte_cargo.jpg") no-repeat center;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+#banner-int > div {
+    width: 100%;
+    display: table;
+}
+
+.banner-int {
+    width: 1170px;
+    margin: auto;
+    height: 30vh;
+    min-height: 200px;
+    position: relative;
+}
+
+.banner-int h1 {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 50px;
+    color: #FFF;
+    margin: 0;
+    display: table;
+}
+
+@media screen and (max-width: 1200px) {
+    .banner-int {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+}
+
+@media screen and (max-width: 768px) {
+    .banner-int {
+        height: 20vh;
+        min-height: 150px;
+    }
+
+    .banner-int h1 {
+        font-size: 40px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 480px) {
+    .banner-int {
+        height: 25vh;
+        min-height: 200px;
+    }
+
+    .banner-int h1 {
+        font-size: 30px;
+    }
+}

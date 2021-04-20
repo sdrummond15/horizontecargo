@@ -3,7 +3,7 @@
  * @package     Joomla.Site
  * @subpackage  com_contact
  *
- * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,7 +12,9 @@ defined('_JEXEC') or die;
 /**
  * HTML View class for the Contact component
  *
- * @since  1.5
+ * @package     Joomla.Site
+ * @subpackage  com_contact
+ * @since       1.5
  */
 class ContactViewCategory extends JViewCategoryfeed
 {
@@ -24,7 +26,7 @@ class ContactViewCategory extends JViewCategoryfeed
 
 	/**
 	 * Method to reconcile non standard names from components to usage in this class.
-	 * Typically overridden in the component feed view class.
+	 * Typically overriden in the component feed view class.
 	 *
 	 * @param   object  $item  The item for a feed, an element of the $items array.
 	 *

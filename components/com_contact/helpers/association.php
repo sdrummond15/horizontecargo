@@ -3,20 +3,21 @@
  * @package     Joomla.Site
  * @subpackage  com_contact
  *
- * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('_JEXEC') or die;
 
 JLoader::register('ContactHelper', JPATH_ADMINISTRATOR . '/components/com_contact/helpers/contact.php');
-JLoader::register('ContactHelperRoute', JPATH_SITE . '/components/com_contact/helpers/route.php');
 JLoader::register('CategoryHelperAssociation', JPATH_ADMINISTRATOR . '/components/com_categories/helpers/association.php');
 
 /**
  * Contact Component Association Helper
  *
- * @since  3.0
+ * @package     Joomla.Site
+ * @subpackage  com_contact
+ * @since       3.0
  */
 abstract class ContactHelperAssociation extends CategoryHelperAssociation
 {
@@ -30,13 +31,17 @@ abstract class ContactHelperAssociation extends CategoryHelperAssociation
 	 *
 	 * @since  3.0
 	 */
+
 	public static function getAssociations($id = 0, $view = null)
 	{
-		$jinput = JFactory::getApplication()->input;
-		$view   = $view === null ? $jinput->get('view') : $view;
-		$id     = empty($id) ? $jinput->getInt('id') : $id;
+		jimport('helper.route', JPATH_COMPONENT_SITE);
 
-		if ($view === 'contact')
+		$app = JFactory::getApplication();
+		$jinput = $app->input;
+		$view = is_null($view) ? $jinput->get('view') : $view;
+		$id = empty($id) ? $jinput->getInt('id') : $id;
+
+		if ($view == 'contact')
 		{
 			if ($id)
 			{
@@ -46,14 +51,14 @@ abstract class ContactHelperAssociation extends CategoryHelperAssociation
 
 				foreach ($associations as $tag => $item)
 				{
-					$return[$tag] = ContactHelperRoute::getContactRoute($item->id, (int) $item->catid, $item->language);
+					$return[$tag] = ContactHelperRoute::getContactRoute($item->id, $item->catid, $item->language);
 				}
 
 				return $return;
 			}
 		}
 
-		if ($view === 'category' || $view === 'categories')
+		if ($view == 'category' || $view == 'categories')
 		{
 			return self::getCategoryAssociations($id, 'com_contact');
 		}

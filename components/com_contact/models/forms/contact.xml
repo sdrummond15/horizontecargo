@@ -1,72 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form>
-	<fieldset name="contact" addrulepath="components/com_contact/models/rules" label="COM_CONTACT_CONTACT_DEFAULT_LABEL">
-		<field
-			name="spacer"
-			type="spacer"
-			label="COM_CONTACT_CONTACT_REQUIRED"
-			class="text"
-		/>
-
-		<field
-			name="contact_name"
+	<fieldset name="contact" addrulepath="components/com_contact/models/rules" label="COM_CONTACT_FORM_LABEL">
+		<field name="contact_name"
 			type="text"
-			label="COM_CONTACT_CONTACT_EMAIL_NAME_LABEL"
-			description="COM_CONTACT_CONTACT_EMAIL_NAME_DESC"
 			id="contact-name"
 			size="30"
+			description="COM_CONTACT_CONTACT_EMAIL_NAME_DESC"
+			label="COM_CONTACT_CONTACT_EMAIL_NAME_LABEL"
 			filter="string"
 			required="true"
+                     hint="Nome"
 		/>
-
-		<field
-			name="contact_email"
+                <field name="phone"
+                       type="tel" 
+                       class="inputbox"
+                       size="40"
+                       maxlength="15"
+                       label="JFIELD_TEL_LABEL"
+                       hint="Telefone"
+                       required="true"
+                />
+		<field name="contact_email"
 			type="email"
-			label="COM_CONTACT_EMAIL_LABEL"
-			description="COM_CONTACT_EMAIL_DESC"
 			id="contact-email"
 			size="30"
+			description="COM_CONTACT_EMAIL_DESC"
+			label="COM_CONTACT_EMAIL_LABEL"
 			filter="string"
 			validate="contactemail"
-			autocomplete="email"
 			required="true"
+			hint="E-mail"
 		/>
-
-		<field
-			name="contact_subject"
+                <field name="company"
+                       type="text" 
+                       class="inputbox"
+                       size="40"
+                       label="JFIELD_COMPANY_LABEL"
+                       hint="Empresa"
+                />
+		<field name="contact_subject"
 			type="text"
-			label="COM_CONTACT_CONTACT_MESSAGE_SUBJECT_LABEL"
-			description="COM_CONTACT_CONTACT_MESSAGE_SUBJECT_DESC"
 			id="contact-emailmsg"
 			size="60"
+			description="COM_CONTACT_CONTACT_MESSAGE_SUBJECT_DESC"
+			label="COM_CONTACT_CONTACT_MESSAGE_SUBJECT_LABEL"
 			filter="string"
 			validate="contactemailsubject"
 			required="true"
+                     hint="Assunto"
 		/>
-
-		<field
-			name="contact_message"
+		<field name="contact_message"
 			type="textarea"
-			label="COM_CONTACT_CONTACT_ENTER_MESSAGE_LABEL"
-			description="COM_CONTACT_CONTACT_ENTER_MESSAGE_DESC"
 			cols="50"
 			rows="10"
 			id="contact-message"
+			description="COM_CONTACT_CONTACT_ENTER_MESSAGE_DESC"
+			label="COM_CONTACT_CONTACT_ENTER_MESSAGE_LABEL"
 			filter="safehtml"
 			validate="contactemailmessage"
 			required="true"
+                     hint="Mensagem"
 		/>
-
-		<field
-			name="contact_email_copy"
+		<field name="contact_email_copy"
 			type="checkbox"
-			label="COM_CONTACT_CONTACT_EMAIL_A_COPY_LABEL"
-			description="COM_CONTACT_CONTACT_EMAIL_A_COPY_DESC"
 			id="contact-email-copy"
+			description="COM_CONTACT_CONTACT_EMAIL_A_COPY_DESC"
+			label="COM_CONTACT_CONTACT_EMAIL_A_COPY_LABEL"
 			default="0"
 		/>
-	</fieldset>
 
+	</fieldset>
 	<fieldset name="captcha">
 		<field
 			name="captcha"
