@@ -130,17 +130,28 @@ jQuery(document).ready(function ($) {
       url: path + "modules/mod_quotation_form/tmpl/sendmail.php",
       async: true,
       data: formData,
+      dataType: "JSON",
       processData: false,
       contentType: false,
       success: function (data) {
         $("#msg-box").removeClass("alert-danger").addClass("alert-" + data.class);
-        $("#msg").append(data);
+        $("#msg").append(data.msg);
+        $("html, body").animate(
+          {
+            scrollTop: $("#quotation").offset().top - $("#header").height() - 10,
+          },
+          300,
+          function () {
+            $("#msg-box").slideDown("slow");
+          }
+        );
       },
       beforeSend: function () {
         $(".loading").fadeIn("fast");
       },
       complete: function () {
-        // $("#form-quotation")[0].reset();
+        $("#form-quotation")[0].reset();
+        $(".loading").fadeOut("fast");
       },
     });
   });

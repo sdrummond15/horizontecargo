@@ -114,7 +114,6 @@
                             <input id="email" name="email" type="email" placeholder="E-mail" required>
                         </div>
                     </div>
-                    <?= $email_admin; ?>
                     <input id="email_admin" type="hidden" name="email_admin" value="<?= $email_admin; ?>" />
                     <input id="subject" type="hidden" name="subject" value="<?= $subject; ?>" />
                     <button type="submit" id="enviar" class="btn btn-default"><?= (!empty($enviar)) ? $enviar : 'Enviar'; ?></button>

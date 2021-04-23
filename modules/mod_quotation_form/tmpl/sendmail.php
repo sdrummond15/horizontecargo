@@ -99,7 +99,7 @@ try {
     $mail->setBody($body);
     $sent = $mail->Send();
 
-    $response['msg'] = 'Em breve responderemos sua solitação';
+    $response['msg'] = 'Cotação enviada com sucesso!<br>Em breve responderemos sua solitação';
     $response['class'] = 'success';
 } catch (phpmailerException $e) {
     $response['class'] = 'danger';
