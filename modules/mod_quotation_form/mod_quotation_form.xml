@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+        type="module"
+        version="3"
+        client="site"
+        method="upgrade">
+    <name>mod_quotation_form</name>
+    <author>Wanderson Alves</author>
+    <creationDate>04/2021</creationDate>
+    <copyright>Copyright (C) - 2021 - Sdrummond Soluções em Tecnologia. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>wanderson@sdrummond.com.br</authorEmail>
+    <authorUrl>www.sdrummond.com.br</authorUrl>
+    <version>1.0.0</version>
+    <description>MOD_QUOTATION_FORM_XML_DESCRIPTION</description>
+    <files>
+        <filename module="mod_quotation_form">mod_quotation_form.php</filename>
+        <folder>tmpl</folder>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <filename>mod_quotation_form.xml</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="module_settings" label="Configurações">
+                <field name="email_admin"
+                       type="radio"
+                       class="btn-group"
+                       default="1" label="Usar o e-mail padrão"
+                       description="Se SIM usará o e-mail padrão cadastrado, se NÃO deverá informar o e-mail cadastrado no próximo campos"
+                >
+                    <option value="1">Sim</option>
+                    <option value="0">Não</option>
+                </field>
+
+                <field name="email"
+                       type="text"
+                       description="Informe o e-mail alternativo"
+                       label="E-Mail"
+                       default=""
+                       showon="email_admin:0"
+                />
+
+                <field name="button_enviar"
+                       type="text"
+                       description="Texto personalizado para o botão"
+                       label="Botão de envio"
+                       default=""
+                />
+
+                <field name="success"
+                       type="text"
+                       description="Informe a mensagem que irá aparecer caso o envio seja realizado com sucesso"
+                       label="Mensagem de sucesso de envio"
+                       default="Obrigado!"
+                       filter="raw"
+                />
+
+                <field name="failure"
+                       type="text"
+                       description="Informe a mensagem que irá aparecer caso ocorra erro de envio"
+                       label="Mensagem de erro de envio"
+                       default="Erro no envio!"
+                />
+
+                <field name="subject"
+                       type="text"
+                       description="Assunto do e-mail"
+                       label="Assunto"
+                       default=""
+                />
+
+            </fieldset>
+            <fieldset name="advanced">
+                <field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                       description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

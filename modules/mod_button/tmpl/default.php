@@ -1,5 +1,5 @@
 <?php
-$link = ($params->get('type_link') == 'menu_item') ? $params->get('menu_item') : $params->get('external_url');
+$link = ($params->get('type_link') == 'menu_item') ? JRoute::_('index.php?Itemid=' . $params->get('menu')) : $params->get('external_url');
 $class = (!empty($params->get('class_button'))) ? 'btn-' . $params->get('class_button') : '';
 $title = (!empty($params->get('title'))) ? $params->get('title') : 'Clique aqui';
 $image = '';

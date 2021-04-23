@@ -6,6 +6,18 @@
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 defined('_JEXEC') or die('Restricted access');
+
+$document = JFactory::getDocument();
+$document->addStyleSheet($this->baseurl . '/templates/system/css/system.css');
+$document->addStyleSheet($this->baseurl . '/templates/system/css/general.css');
+$document->addStyleSheet($this->baseurl . '/templates/' . $this->template .'/css/fontawesome-all.min.css');
+$document->addStyleSheet($this->baseurl . '/templates/' . $this->template .'/css/bootstrap.min.css');
+$document->addStyleSheet($this->baseurl . '/templates/' . $this->template .'/css/template.css');
+$document->addScript($this->baseurl . '/templates/' . $this->template .'/js/sfhover.js');
+$document->addScript($this->baseurl . '/templates/' . $this->template .'/js/jquery-1.11.3.js');
+$document->addScript($this->baseurl . '/templates/' . $this->template .'/js/bootstrap.min.js');
+$document->addScript($this->baseurl . '/templates/' . $this->template .'/js/script_main.js');
+
 $LeftMenuOn = $this->countModules('position-7');
 $RightMenuOn = $this->countModules('position-6');
 $TopNavOn = $this->countModules('position-13');
@@ -17,7 +29,6 @@ $logoimage = $this->params->get('logoimage');
 $sitetitle = $this->params->get('sitetitle');
 $sitedescription = $this->params->get('sitedescription');
 
-$app = JFactory::getApplication();
 $menu = $app->getMenu();
 $lang = JFactory::getLanguage();
 $home = boolval($menu->getActive() == $menu->getDefault($lang->getTag()));
@@ -28,6 +39,7 @@ if ($LeftMenuOn and $RightMenuOn) {
 } elseif ($LeftMenuOn or $RightMenuOn) {
     $w = 'w2';
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -35,16 +47,7 @@ if ($LeftMenuOn and $RightMenuOn) {
 
 <head>
     <jdoc:include type="head" />
-    <link rel="stylesheet" href="<?= $this->baseurl ?>/templates/system/css/system.css" type="text/css" />
-    <link rel="stylesheet" href="<?= $this->baseurl ?>/templates/system/css/general.css" type="text/css" />
-    <link rel="stylesheet" href="<?= $this->baseurl ?>/templates/<?= $this->template; ?>/css/fontawesome-all.min.css" type="text/css" />
-    <link rel="stylesheet" href="<?= $this->baseurl ?>/templates/<?= $this->template; ?>/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="<?= $this->baseurl ?>/templates/<?= $this->template; ?>/css/template.css" type="text/css" />
     <script type="text/javascript" >const home = '<?= $home ?>';</script>
-    <script type="text/javascript" src="<?= $this->baseurl ?>/templates/<?= $this->template; ?>/js/sfhover.js"></script>
-    <script type="text/javascript" src="<?= $this->baseurl ?>/templates/<?= $this->template; ?>/js/jquery-1.11.3.js"></script>
-    <script type="text/javascript" src="<?= $this->baseurl ?>/templates/<?= $this->template; ?>/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="<?= $this->baseurl ?>/templates/<?= $this->template; ?>/js/script_main.js"></script>
 </head>
 
 <body>
@@ -213,7 +216,6 @@ if ($LeftMenuOn and $RightMenuOn) {
         </div>
     </div>
     </div>
-
 </body>
 
 </html>

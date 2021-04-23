@@ -1,0 +1,137 @@
+#quotation {}
+
+#quotation .quotation {
+    width: 100%;
+    display: table;
+}
+
+#quotation .quotation>div {
+    width: 1170px;
+    margin: auto;
+    display: table;
+}
+
+#quotation fieldset {
+    width: calc(50% - 20px);
+    margin: 0 10px;
+    float: left;
+}
+
+#quotation fieldset h3 {
+    margin-top: 10px;
+}
+
+#quotation select, #quotation input, #quotation textarea {
+    width: 100%;
+    padding: 5px 10px;
+    margin-bottom: 8px;
+    border: 0;
+    background-color: #eee;
+    font-family: 'Catamaran';
+    font-size: 18px;
+}
+
+input#de {
+    width: calc(100% - 34px);
+    margin-left: 5px;
+}
+
+input#ate {
+    width: calc(100% - 38px);
+    margin-left: 5px;
+}
+
+select#cuidado {
+    width: calc(100% - 73px);
+    margin-left: 5px;
+}
+
+input#anexo {
+    width: calc(100% - 60px);
+    margin-left: 5px;
+}
+
+textarea#embalagem_observacoes {
+    height: 174px;
+}
+
+#msg-box {
+    display: none;
+}
+
+#msg-box .fechar {
+    position: absolute;
+    right: 5px;
+    top: -2px;
+    cursor: pointer;
+}
+
+.loading {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    height: 100vh;
+    left: 0;
+}
+
+.loading i {
+    color: #FFF;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: table;
+    left: 50%;
+    top: 50%;
+    transition: linear 100ms;
+    position: absolute;
+}
+
+.enviado-overlay {
+    position: fixed;
+    z-index: 9998;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+div.enviado {
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: url("../../../../images/backjunte.jpg") no-repeat;
+    width: 488px;
+    height: 296px;
+    position: absolute;
+    z-index: 9999;
+    display: table;
+    left: 50%;
+    top: 50%;
+    transition: linear 100ms;
+}
+
+div.enviado>div.fechar {
+    padding: 5px;
+    text-align: right;
+    display: table;
+    width: calc(100% - 10px);
+    line-height: 1;
+}
+
+div.enviado>div.fechar i {
+    cursor: pointer;
+}
+
+div.enviado h1 {
+    font-family: 'quicksandbold';
+    color: #676565;
+    font-size: 18px;
+    text-align: center;
+    margin: 40px 0 10px 0;
+}

@@ -397,7 +397,7 @@ hr {
 
 #contact-form button.validate, #login-form input.button, #mailto-window button, #member-profile button.validate, #member-registration button.validate, #searchForm button, #user-registration button.validate, .btn, .login button, .logout button {
     width: auto;
-    padding: 5px 20px;
+    padding: 8px 20px 5px 20px;
     float: right;
     background-color: #004b81;
     color: #FFF;
@@ -406,6 +406,8 @@ hr {
     border: 0;
     font-family: 'Catamaran';
     font-size: 20px;
+    line-height: 1;
+    border-radius: 0;
 }
 
 #contact-form button.validate:hover, #login-form input.button:hover, #mailto-window button:hover, #member-profile button.validate:hover, #member-registration button.validate:hover, #searchForm button:hover, #user-registration button.validate:hover, .btn:hover, .login button:hover, .logout button:hover {
@@ -622,11 +624,9 @@ p.link-c {
     border: 0;
 }
 
-#topmenu li.active ul a:hover {
-}
+#topmenu li.active ul a:hover {}
 
-#topmenu li.active ul a {
-}
+#topmenu li.active ul a {}
 
 #topmenu li ul ul {
     margin: -39px 0 0 220px;
@@ -777,10 +777,6 @@ p.link-c {
     padding-top: 60px;
     overflow: hidden;
     margin-bottom: 60px;
-}
-
-#content-w1 h3, #content-w2 h3, #content-w3 h3 {
-    margin-top: 20px;
 }
 
 #content-top {
@@ -2029,7 +2025,7 @@ body.contentpane a:hover {
 
 .acym_module_form input {
     width: 100%;
-    max-width: 100%;
+    max-width: 100% !important;
     padding: 2px 10px;
     border: 0;
     margin-bottom: 5px;
@@ -2046,7 +2042,7 @@ body.contentpane a:hover {
     width: auto!important;
     background-color: transparent;
     border: 1px solid #FFF;
-    padding: 5px 20px 2px 20px;
+    padding: 8px 20px 5px 20px;
     border-radius: 0;
     float: right;
     cursor: pointer;
@@ -2360,10 +2356,9 @@ a.readmore-link-c {
     margin: 0 10px;
 }
 
-.contact-form textarea,
-.contact-form input {
+.contact-form textarea, .contact-form input {
     width: 100%;
-    padding: 5px 2%;
+    padding: 5px 10px;
     margin-bottom: 8px;
     border: 0;
     background-color: #eee;
