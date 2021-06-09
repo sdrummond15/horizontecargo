@@ -1,0 +1,119 @@
+.orcamentos-form h1{
+    line-height: 1.2;
+    color: #002a28;
+    font-family: 'Catamaran';
+    font-size: 30px;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+#orcamento-form{
+    display: table;
+    margin: auto;
+    width: 100%;
+}
+#orcamento-form input{
+    width: 96%;
+    padding: 5px 2%;
+    margin-bottom: 14px;
+    border: 0;
+    background-color: #f1f1f1;
+    color: #444;
+    font-family: 'Catamaran';
+    font-size: 16px;
+    border-radius: 0;
+    float: left;
+}
+#orcamento-form input#endereco,
+#orcamento-form input#cidade,
+#orcamento-form input#telefone,
+#orcamento-form input#qtdzeladores,
+#orcamento-form input#qtdfaxineiras,
+#orcamento-form input#qtdoutros,
+#orcamento-form input#qtdporteiros{
+    width: 45%;
+    padding: 8px 2%;
+    margin-right: 2%;
+}
+#orcamento-form input#bairro,
+#orcamento-form input#cep,
+#orcamento-form input#email,
+#orcamento-form input#jornadazelador,
+#orcamento-form input#jornadafaxineiras,
+#orcamento-form input#jornadaoutros,
+#orcamento-form input#jornadaporteiros{
+    width: 45%;
+    padding: 8px 2%;
+}
+.dados{
+    display: table;
+    width: 100%;
+}
+
+.unidades{
+    display: table;
+    width: 100%;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.unidades div{
+    width: 30%;
+    margin-right: 5%;
+    float: left;
+}
+.unidades div:last-child{
+    margin-right: 0;
+}
+#orcamento-form h4,
+#orcamento-form label{
+    font-family: 'Catamaran';
+    color: #002a28;
+    font-size: 16px;
+    line-height: 1.4em;
+    margin: 0 0 10px 0;
+    font-weight: normal;
+}
+
+.funcionarios{
+    display: table;
+    width: 100%;
+    margin: 0 0 20px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+#orcamento-form input.submitform{
+    font-family: 'Catamaran';
+    width: auto;
+    padding: 10px 20px;
+    background-color: #00675a;
+    color: #FFF;
+    cursor: pointer;
+    border: 0;
+    font-size: 18px;
+    margin: auto;
+    display: table;
+    float: none;
+}
+#orcamento-form input.submitform:hover{
+    background-color: #058070;
+}
+@media screen and (max-width: 768px){
+    .orcamentos-form h1{
+        font-size: 24px;
+    }
+    #orcamento-form input.submitform{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 600px){
+    #orcamento-form input{
+        width: 96% !important;
+        padding: 5px 2% !important;
+        margin-right: auto !important;
+    }
+    .unidades div{
+        width: 100%;
+        margin-right: auto;
+    }
+}

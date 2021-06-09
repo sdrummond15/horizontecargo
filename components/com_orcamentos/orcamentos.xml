@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+    <name>com_orcamentos</name>
+    <author>Wanderson Alves</author>
+    <creationDate>15/06/2016</creationDate>
+    <copyright>(C)2014 SDrummond. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see	LICENSE.txt</license>
+    <authorEmail>wanderson@sdrummond.com.br</authorEmail>
+    <authorUrl>www.sdrummond.com.br</authorUrl>
+    <version>3.6.0</version>
+    <description>COM_ORCAMENTOS_XML_DESCRIPTION</description>
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    <files folder="site">
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>language</folder>
+        <folder>models</folder>
+        <folder>views</folder>
+        <folder>orcamento.php</folder>
+        <folder>controller.php</folder>
+        <folder>index.html</folder>
+    </files>
+    <languages folder="site">
+        <language tag="pt-BR">language/pt-BR.com_orcamentos.ini</language>
+        <language tag="pt-BR">language/pt-BR.com_orcamentos.sys.ini</language>
+    </languages>
+    <administration>
+        <menu img="../media/com_orcamentos/images/menu/orcamento.png">com_orcamentos</menu>
+        <submenu>
+            <menu link="option=com_orcamentos&amp;view=orcamentos" view="orcamentos" img="../media/com_orcamentos/images/menu/orcamento.png" alt="Orcamentos/Orcamentos">com_orcamentos_orcamentos</menu>
+        </submenu>
+        <files folder="admin">
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>languages</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+            <filename>orcamento.php</filename>
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+        </files>
+        <languages folder="admin">
+            <language tag="pt-BR">language/pt-BR.com_orcamentos.ini</language>
+            <language tag="pt-BR">language/pt-BR.com_orcamentos.sys.ini</language>
+        </languages>
+    </administration>
+</extension>
