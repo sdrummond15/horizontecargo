@@ -71,10 +71,12 @@ jQuery(document).ready(function ($) {
             }
           }
         } else {
-          console.log('yuryurt');
           $("#header_wrap").next().css("margin-top", $("#header").height());
         }
       });
+
+      $('.menuresp').css('max-height', $(window).height()-$("#header").height());
+
     })
     .trigger("resize");
 

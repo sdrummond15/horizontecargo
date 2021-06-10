@@ -892,9 +892,7 @@ button.swiper-pagination-bullet {
   font-weight: 300;
 }
 
-.slider .swiper-container .swiper-slide .inner.box-text-right .line-title,
-.slider .swiper-container .swiper-slide .inner.box-text-right h2,
-.slider .swiper-container .swiper-slide .inner.box-text-right p{
+.slider .swiper-container .swiper-slide .inner.box-text-right .line-title, .slider .swiper-container .swiper-slide .inner.box-text-right h2, .slider .swiper-container .swiper-slide .inner.box-text-right p {
   text-align: right;
   float: right;
   clear: right;
@@ -1021,6 +1019,7 @@ button.swiper-pagination-bullet {
 @media only screen and (max-width: 991px), only screen and (max-device-width: 991px) {
   .slider .swiper-container .swiper-slide .inner h2 {
     max-width: 100%;
+    font-size: 36px;
   }
   .slider .swiper-container .swiper-slide .inner p {
     max-width: 70%;
@@ -1039,14 +1038,14 @@ button.swiper-pagination-bullet {
 /* RESPONSIVE MOBILE FIXES */
 
 @media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
-  .slider .swiper-container .swiper-slide .inner {
-    padding: 0 30px;
+  .slider {
+    min-height: 300px;
   }
-  .slider .swiper-container .swiper-slide .inner p,
-  .slider .swiper-container .swiper-button-prev,
-  .slider .swiper-container .swiper-button-line,
-  .slider .swiper-container .swiper-button-next,
-  .slider .swiper-container .swiper-pagination-fraction {
+  .slider .swiper-container .swiper-slide .inner {
+    padding: 0 20px;
+    top: 20%;
+  }
+  .slider .swiper-container .swiper-slide .inner p, .slider .swiper-container .swiper-button-prev, .slider .swiper-container .swiper-button-line, .slider .swiper-container .swiper-button-next, .slider .swiper-container .swiper-pagination-fraction {
     display: none;
   }
 }

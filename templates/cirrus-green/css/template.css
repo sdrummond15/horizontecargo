@@ -450,7 +450,8 @@ p.link-c {
 
 #logo a {
     display: table;
-    line-height: .9;
+    line-height: 0.9;
+    text-align: center;
 }
 
 #topnav_wrap {
@@ -2395,6 +2396,7 @@ a.readmore-link-c {
 .menuresp {
     visibility: hidden;
     width: 100%;
+    overflow-y: auto;
 }
 
 .menuresp ul {
@@ -2555,8 +2557,7 @@ a.readmore-link-c {
         font-size: 16px;
     }
     #logo a img {
-        margin: 3px 15px;
-        height: 50px;
+        max-width: 90%;
     }
     .item-page-home .img-fulltext-right {
         float: none;
