@@ -71,7 +71,8 @@ class modDJImageSliderHelper
 		foreach($images as $image) {
 			$slides[] = (object) array('title'=>'', 'description'=>'', 'image'=>$folder.'/'.$image, 'link'=>$params->get('link'), 'alt'=>$image, 'target'=>$target);
 		}
-				
+
+
 		return $slides;
     }
 	
@@ -123,7 +124,7 @@ class modDJImageSliderHelper
 			$slide->params = new JRegistry($slide->params);
 			$slide->link = modDJImageSliderHelper::getSlideLink($slide);
 			$slide->description = modDJImageSliderHelper::getSlideDescription($slide, $params->get('limit_desc'));
-			$slide->alt = $slide->params->get('alt_attr', $slide->title);
+			$slide->alt = $slide->params->get('alt_attr', '');
 			$slide->img_title = $slide->params->get('title_attr');
 			$slide->target = $slide->params->get('link_target','');
 			$slide->rel = $slide->params->get('link_rel','');
@@ -457,4 +458,17 @@ class modDJImageSliderHelper
 		return $style;
 	}
 
+	public static function getGoogleFontSlug($fonts) {
+		$slugs = array();
+		$fonts = array_unique($fonts);
+
+
+
+		foreach ($fonts as $font) {
+			if($font != '')
+				$slugs[] = str_replace(" ", "+" , $font);
+		}
+
+		return implode($slugs, "|");
+	}
 }

@@ -2,13 +2,13 @@
 <extension type="package" version="2.5.5" method="upgrade">
 	<name>DJ-ImageSlider Package</name>
 	<packagename>dj-imageslider</packagename>
-	<creationDate>2020-01-19</creationDate>
+	<creationDate>2018-12-19</creationDate>
 	<author>DJ-Extensions.com</author>
 	<copyright>Copyright (C) 2017 DJ-Extensions.com, All rights reserved.</copyright>
 	<license> http://www.gnu.org/licenses GNU/GPL</license>
 	<authorEmail>contact@dj-extensions.com</authorEmail>
 	<authorUrl>http://dj-extensions.com</authorUrl>
-	<version>4.1.1</version>
+	<version>4.0.1</version>
 	<url>http://dj-extensions.com</url>
 	<packager></packager>
 	<packagerurl></packagerurl>

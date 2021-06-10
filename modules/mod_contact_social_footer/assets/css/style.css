@@ -70,3 +70,8 @@ ul.contact-social-footer li a i {
     font-size: 36px;
     vertical-align: sub;
 }
+@media screen and (max-width:1200px) {
+    #contact-social-footer .phone, #contact-social-footer .email {
+        font-size: 20px;
+    }
+}

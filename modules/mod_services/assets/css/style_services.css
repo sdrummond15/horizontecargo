@@ -5,7 +5,7 @@
     background-color: #004b81;
 }
 
-#services{
+#services {
     width: 1170px;
     margin: 0 auto;
     padding: 80px 0;
@@ -80,6 +80,9 @@
 }
 
 @media screen and (max-width: 1200px) {
+    #services {
+        width: 100%;
+    }
     #services .service {
         width: calc(25% - 10px);
         margin: 0 5px;
@@ -97,12 +100,10 @@
     #modservices {
         margin-bottom: 10px;
     }
-
     #services .service {
         width: calc(50% - 10px);
         margin: 0 5px 20px 5px;
     }
-
     #services .service {
         width: 100%;
         max-width: 350px;

@@ -46,8 +46,9 @@ if ($LeftMenuOn and $RightMenuOn) {
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?= $this->language; ?>" lang="<?= $this->language; ?>" dir="<?= $this->direction; ?>">
 
 <head>
+    <script type="text/javascript">const home = '<?= $home ?>';</script>
     <jdoc:include type="head" />
-    <script type="text/javascript" >const home = '<?= $home ?>';</script>
+    <meta name="viewport" content="width=device-width, user-scalable=no"/>
 </head>
 
 <body>

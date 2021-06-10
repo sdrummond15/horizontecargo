@@ -40,14 +40,10 @@ $title_font = $params->get('title_font', '');
 $desc_font = $params->get('desc_font', '');
 $readmore_font = $params->get('readmore_font', '');
 
-$title_size =  $params->get('title_size', '');
-$desc_size =  $params->get('desc_size', '');
-$readmore_size =  $params->get('readmore_size', '');
 
-
-$title_style = (($title_color) ? 'color:' . $title_color . ';' : '') . (($title_font != '') ? 'font-family:\'' . $title_font . '\';' : '') . (($title_size != '') ? 'font-size: ' . $title_size . ';' : '');
-$desc_style = (($desc_color) ? 'color:' . $desc_color . ';' : '') . (($desc_font != '') ? 'font-family:\'' . $desc_font . '\';' : '') . (($desc_size != '') ? 'font-size: ' . $desc_size . ';' : '');
-$readmore_style = (($readmore_color) ? 'color:' . $readmore_color . ';' : '') . (($readmore_font != '') ? 'font-family:\'' . $readmore_font . '\';' : '') . (($readmore_size != '') ? 'font-size: ' . $readmore_size . ';' : '');
+$title_style = (($title_color) ? 'color:' . $title_color . ';' : '') . (($title_font != '') ? 'font-family:\'' . $title_font . '\';' : '');
+$desc_style = (($desc_color) ? 'color:' . $desc_color . ';' : '') . (($desc_font != '') ? 'font-family:\'' . $desc_font . '\';' : '');
+$readmore_style = (($readmore_color) ? 'color:' . $readmore_color . ';' : '') . (($readmore_font != '') ? 'font-family:\'' . $readmore_font . '\';' : '');
 
 $border_radius = $params->get('border_radius', '0px 0px 0px 0px;');
 
@@ -62,7 +58,7 @@ if($params->get('include_gf')) {
 <div style="border: 0px !important;">
 <div id="djslider-loader<?php echo $mid; ?>" class="djslider-loader djslider-loader-<?php echo $theme ?>" data-animation='<?php echo $animationOptions ?>' data-djslider='<?php echo $moduleSettings ?>'<?php echo $wcag; ?>>
     <div id="djslider<?php echo $mid; ?>" class="djslider djslider-<?php echo $theme; echo $params->get('image_centering', 0) ? ' img-vcenter':'' ?>" style="<?php echo $style['slider'] ?>">
-        <div id="slider-container<?php echo $mid; ?>" class="slider-container" <?php echo (($border_radius != '0px 0px 0px 0px;') ? 'style="border-radius:' . $border_radius . ';"' : '')?>>
+        <div id="slider-container<?php echo $mid; ?>" class="slider-container" <?php echo (($border_radius != '0px 0px 0px 0px;') ? 'style="border-radius:"' . $border_radius . ';"' : '')?>>
         	<ul id="slider<?php echo $mid; ?>" class="djslider-in">
           		<?php foreach ($slides as $slide) {
 

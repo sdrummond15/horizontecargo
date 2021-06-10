@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" version="3.8" client="site" method="upgrade">
 	<name>DJ-ImageSlider</name>
-	<creationDate>2020-01-19</creationDate>
+	<creationDate>2018-12-19</creationDate>
 	<author>DJ-Extensions.com</author>
 	<copyright>Copyright (C) 2017 DJ-Extensions.com, All rights reserved.</copyright>
 	<license> http://www.gnu.org/licenses GNU/GPL</license>
 	<authorEmail>contact@dj-extensions.com</authorEmail>
 	<authorUrl>http://dj-extensions.com</authorUrl>
-	<version>4.1.1</version>
+	<version>4.1.beta</version>
 	<description>DJ-ImageSlider Module</description>
 	<files>
 		<filename module="mod_djimageslider">mod_djimageslider.php</filename>
@@ -23,7 +23,7 @@
 		<folder>magnific</folder>
 		<folder>jquery-easing</folder>
 	</media>
-
+	
 	<config>
 		<fields name="params" addfieldpath="/administrator/components/com_djimageslider/models/fields">
 			<fieldset name="basic">
@@ -48,11 +48,6 @@
 
 				<field type="djspacer" label="MOD_DJIMAGESLIDER_COMPONENT_AS_SOURCE_SETTINGS" showon="slider_source:1" />
 				<field name="category" type="category" extension="com_djimageslider" label="MOD_DJIMAGESLIDER_SLIDES_CATEGORY" description="MOD_DJIMAGESLIDER_SLIDES_CATEGORY_DESC" showon="slider_source:1" />
-				<field name="include_subcategories" showon="slider_source:1" type="radio" default="0" label="MOD_DJIMAGESLIDER_SLIDES_INCLUDE_SUBCATEGORIES" description="MOD_DJIMAGESLIDER_SLIDES_INCLUDE_SUBCATEGORIES_DESC" class="btn-group btn-group-yesno">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-
 
 				<field type="spacer" label="&lt;hr &#47;&gt;" />
 
@@ -128,28 +123,25 @@
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-				<field name="readmore_text" type="text" default="" size="50" label="MOD_DJIMAGESLIDER_READMORE_TEXT" description="MOD_DJIMAGESLIDER_READMORE_TEXT_DESC" showon="slider_source:1[AND]show_readmore:1" />
-				<field name="link_title" type="radio" class="btn-group" default="1" label="MOD_DJIMAGESLIDER_LINK_TITLE" description="MOD_DJIMAGESLIDER_LINK_TITLE_DESC" showon="slider_source:1[AND]show_title:1">
+				<field name="readmore_text" type="text" default="" size="50" label="MOD_DJIMAGESLIDER_READMORE_TEXT" description="MOD_DJIMAGESLIDER_READMORE_TEXT_DESC" showon="slider_source:1" />
+				<field name="link_title" type="radio" class="btn-group" default="1" label="MOD_DJIMAGESLIDER_LINK_TITLE" description="MOD_DJIMAGESLIDER_LINK_TITLE_DESC" showon="slider_source:1">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-				<field name="link_desc" type="radio" class="btn-group" default="0" label="MOD_DJIMAGESLIDER_LINK_DESCRIPTION" description="MOD_DJIMAGESLIDER_LINK_DESCRIPTION_DESC" showon="slider_source:1[AND]show_desc:1">
+				<field name="link_desc" type="radio" class="btn-group" default="0" label="MOD_DJIMAGESLIDER_LINK_DESCRIPTION" description="MOD_DJIMAGESLIDER_LINK_DESCRIPTION_DESC" showon="slider_source:1">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-				<field name="limit_desc" type="text" default="" size="10" label="MOD_DJIMAGESLIDER_DESCRIPTION_LIMIT" description="MOD_DJIMAGESLIDER_DESCRIPTION_LIMIT_DESC" showon="slider_source:1[AND]show_desc:1" />
+				<field name="limit_desc" type="text" default="" size="10" label="MOD_DJIMAGESLIDER_DESCRIPTION_LIMIT" description="MOD_DJIMAGESLIDER_DESCRIPTION_LIMIT_DESC" showon="slider_source:1" />
 
 
 				<field type="djspacer" label="MOD_DJIMAGESLIDER_CUSTOMISE_SLIDE_FONT_COLOR" />
-				<field name="title_color" type="djcolor" format="rgba" default="#FFFFFF" label="MOD_DJIMAGESLIDER_CUSTOMISE_SLIDE_TITLE_COLOR" showon="slider_source:1[AND]show_title:1" />
-				<field name="title_font" type="text" default="" label="MOD_DJIMAGESLIDER_CUSTOMISE_SLIDE_TITLE_FONT" showon="slider_source:1[AND]show_title:1" />
-				<field name="title_size" type="text" default="" label="MOD_DJIMAGESLIDER_CUSTOMISE_SLIDE_TITLE_FONT_SIZE" placeholder="1em" showon="slider_source:1[AND]show_title:1" />
-				<field name="desc_color" type="djcolor" format="rgba" default="#FFFFFF" label="MOD_DJIMAGESLIDER_CUSTOMISE_SLIDE_DESC_COLOR" showon="slider_source:1[AND]show_desc:1" />
-				<field name="desc_font" type="text" default="" label="MOD_DJIMAGESLIDER_CUSTOMISE_SLIDE_DESC_FONT" showon="slider_source:1[AND]show_desc:1" />
-				<field name="desc_size" type="text" default="" label="MOD_DJIMAGESLIDER_CUSTOMISE_SLIDE_DESC_FONT_SIZE" placeholder="1em" showon="slider_source:1[AND]show_desc:1" />
-				<field name="readmore_color" type="djcolor" format="rgba" default="#FFFFFF" label="MOD_DJIMAGESLIDER_CUSTOMISE_SLIDE_READMORE_COLOR" showon="slider_source:1[AND]show_readmore:1" />
-				<field name="readmore_font" type="text" default="" label="MOD_DJIMAGESLIDER_CUSTOMISE_SLIDE_READMORE_FONT" showon="slider_source:1[AND]show_readmore:1" />
-				<field name="readmore_size" type="text" default="" label="MOD_DJIMAGESLIDER_CUSTOMISE_SLIDE_READMORE_FONT_SIZE" placeholder="1em" showon="slider_source:1[AND]show_readmore:1" />
+				<field name="title_color" type="djcolor" format="rgba" default="#FFFFFF" label="MOD_DJIMAGESLIDER_CUSTOMISE_SLIDE_TITLE_COLOR" />
+				<field name="title_font" type="text" default="" label="MOD_DJIMAGESLIDER_CUSTOMISE_SLIDE_TITLE_FONT" />
+				<field name="desc_color" type="djcolor" format="rgba" default="#FFFFFF" label="MOD_DJIMAGESLIDER_CUSTOMISE_SLIDE_DESC_COLOR" />
+				<field name="desc_font" type="text" default="" label="MOD_DJIMAGESLIDER_CUSTOMISE_SLIDE_DESC_FONT" />
+				<field name="readmore_color" type="djcolor" format="rgba" default="#FFFFFF" label="MOD_DJIMAGESLIDER_CUSTOMISE_SLIDE_READMORE_COLOR" />
+				<field name="readmore_font" type="text" default="" label="MOD_DJIMAGESLIDER_CUSTOMISE_SLIDE_READMORE_FONT" />
 				<field name="desc_bg" type="djcolor" format="rgba" default="#383838" label="MOD_DJIMAGESLIDER_CUSTOMISE_SLIDE_DESC_BG" />
 				<field name="include_gf" type="radio" default="0" label="MOD_DJIMAGESLIDER_CUSTOMISE_SLIDE_INCLUDE_GF" description="MOD_DJIMAGESLIDER_CUSTOMISE_SLIDE_INCLUDE_GF_DESC" class="btn-group btn-group-yesno">
 					<option value="1">JYES</option>
@@ -160,10 +152,10 @@
 
 
 
-				<field type="djspacer" label="MOD_DJIMAGESLIDER_CUSTOMISE_SLIDE_DESCRIPTION" showon="slider_source:1[AND]show_desc:1" />
-				<field name="desc_width" type="text" default="" size="10" label="MOD_DJIMAGESLIDER_DESCRIPTION_WIDTH" description="MOD_DJIMAGESLIDER_DESCRIPTION_WIDTH_DESC" showon="slider_source:1[AND]show_desc:1" />
-				<field name="desc_bottom" type="text" default="0" size="10" label="MOD_DJIMAGESLIDER_DESCRIPTION_VERTICAL_POSITION" description="MOD_DJIMAGESLIDER_DESCRIPTION_VERTICAL_POSITION_DESC" showon="slider_source:1[AND]show_desc:1" />
-				<field name="desc_horizontal" type="text" default="0" size="10" label="MOD_DJIMAGESLIDER_DESCRIPTION_HORIZONTAL_POSITION" description="MOD_DJIMAGESLIDER_DESCRIPTION_HORIZONTAL_POSITION_DESC" showon="slider_source:1[AND]show_desc:1" />
+				<field type="djspacer" label="MOD_DJIMAGESLIDER_CUSTOMISE_SLIDE_DESCRIPTION" />
+				<field name="desc_width" type="text" default="" size="10" label="MOD_DJIMAGESLIDER_DESCRIPTION_WIDTH" description="MOD_DJIMAGESLIDER_DESCRIPTION_WIDTH_DESC" />
+				<field name="desc_bottom" type="text" default="0" size="10" label="MOD_DJIMAGESLIDER_DESCRIPTION_VERTICAL_POSITION" description="MOD_DJIMAGESLIDER_DESCRIPTION_VERTICAL_POSITION_DESC" />
+				<field name="desc_horizontal" type="text" default="0" size="10" label="MOD_DJIMAGESLIDER_DESCRIPTION_HORIZONTAL_POSITION" description="MOD_DJIMAGESLIDER_DESCRIPTION_HORIZONTAL_POSITION_DESC" />
 
 				<field type="spacer" label="&lt;hr &#47;&gt;" />
 				<field type="djspacer" label="MOD_DJIMAGESLIDER_CUSTOMISE_BUTTONS" />
@@ -231,39 +223,39 @@
 			</fieldset>
 
 			<fieldset name="advanced">
-
+				
 				<field
-						name="layout"
-						type="modulelayout"
-						class="form-control"
-						label="JFIELD_ALT_LAYOUT_LABEL"
-						description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+					name="layout"
+					type="modulelayout"
+					class="form-control"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
 				<field
-						name="moduleclass_sfx"
-						type="text"
-						label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
-						description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
 				<field
-						name="cache"
-						type="list"
-						default="1"
-						label="COM_MODULES_FIELD_CACHING_LABEL"
-						description="COM_MODULES_FIELD_CACHING_DESC">
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
 					<option
-							value="1">JGLOBAL_USE_GLOBAL</option>
+						value="1">JGLOBAL_USE_GLOBAL</option>
 					<option
-							value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
 				</field>
 				<field
-						name="cache_time"
-						type="text"
-						default="900"
-						label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
-						description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
-
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				
 			</fieldset>
-
+			
 		</fields>
 	</config>
-
+	
 </extension>

@@ -96,7 +96,7 @@ $db = JFactory::getDBO();
 $db->setQuery("SELECT manifest_cache FROM #__extensions WHERE element='mod_djimageslider' LIMIT 1");
 $ver = json_decode($db->loadResult());
 $ver = $ver->version;
-
+// var_dump($jquery);
 if ($jquery) {
 	JHTML::_('jquery.framework');
 	if (version_compare(JVERSION, '4', '>=')) {
@@ -104,10 +104,10 @@ if ($jquery) {
 	} else {
 		$document->addScript(JURI::root(true).'/media/djextensions/jquery-easing/jquery.easing.min.js', array('mime'=>'text/javascript', 'defer'=>$canDefer));
 	}
-	$document->addScript(JURI::root(true).'/modules/mod_djimageslider/assets/js/slider.js?v='.$ver, array('mime'=>'text/javascript', 'defer'=>$canDefer));
+	$document->addScript(JURI::root(true).'/modules/mod_djimageslider/assets/js/slider_uncompressed.js?v='.$ver, array('mime'=>'text/javascript', 'defer'=>$canDefer));
 } else {
 	JHTML::_('behavior.framework', true);
-	$document->addScript(JURI::root(true).'/modules/mod_djimageslider/assets/js/moo.slider.js?v='.$ver, array('mime'=>'text/javascript', 'defer'=>$canDefer));
+	$document->addScript(JURI::root(true).'/modules/mod_djimageslider/assets/js/moo.slider_uncompressed.js?v='.$ver, array('mime'=>'text/javascript', 'defer'=>$canDefer));
 }
 
 if($params->get('link_image',1) > 1) {

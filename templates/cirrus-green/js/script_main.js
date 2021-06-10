@@ -20,6 +20,7 @@ jQuery(document).ready(function ($) {
       $(".btn.btn-cotacao").addClass("border-blue");
       $(".btn.btn-cotacao").addClass("color-blue");
     }
+    console.log('321321');
     $("#header_wrap").next().css("margin-top", $("#header").height());
   }
 
@@ -70,6 +71,7 @@ jQuery(document).ready(function ($) {
             }
           }
         } else {
+          console.log('yuryurt');
           $("#header_wrap").next().css("margin-top", $("#header").height());
         }
       });

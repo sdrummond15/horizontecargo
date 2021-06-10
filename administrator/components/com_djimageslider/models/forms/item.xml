@@ -163,7 +163,18 @@
 				<option value="search">search</option>
 				<option value="tag">tag</option>
 			</field>
-			
+
+			<field name="link_element"
+				   type="list"
+				   label="COM_DJIMAGESLIDER_LINK_ELEMENT"
+				   description="COM_DJIMAGESLIDER_LINK_ELEMENT_DESC"
+				   default=""
+				   showon="link_type:menu,url,article">
+				<option value="img">COM_DJIMAGESLIDER_LINK_ELEMENT_IMAGE</option>
+				<option value="read_more">COM_DJIMAGESLIDER_LINK_ELEMENT_READ_MORE</option>
+				<option value="">COM_DJIMAGESLIDER_LINK_ELEMENT_BOTH</option>
+			</field>
+
 		</fieldset>
 		
 		<fieldset name="attrs"	label="COM_DJIMAGESLIDER_IMAGE_ATTR_OPTIONS">

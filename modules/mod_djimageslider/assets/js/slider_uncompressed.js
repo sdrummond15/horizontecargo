@@ -217,7 +217,7 @@ var DJSlider = {
 		}
 		
 		function responsive(){
-			
+			$('#djslider-loader' + settings.id).width($(window).width() * 0.96);
 			var wrapper = djsliderWrap.parent();
 			
 			var parentWidth = getSize(wrapper).x;
@@ -226,6 +226,7 @@ var DJSlider = {
 			
 			var maxWidth = parseInt(djslider.css('max-width'));
 			var size = getSize(djslider);
+			
 			var newSliderWidth = size.x;
 			
 			if(newSliderWidth > parentWidth) {
@@ -237,8 +238,8 @@ var DJSlider = {
 			if(!sliderRatio[visible_slides]) sliderRatio[visible_slides] = size.x / size.y;
 			var ratio = sliderRatio[visible_slides];
 			var newSliderHeight = newSliderWidth / ratio;
-			//console.log(ratio);
-			djslider.css('width', newSliderWidth);
+			// console.log(ratio);
+			djslider.css('width', $('#djslider-loader' + settings.id).width());
 			djslider.css('height', newSliderHeight);
 			
 			if (settings.slider_type == 2) { // fade
@@ -278,7 +279,7 @@ var DJSlider = {
 					}
 					if(!sliderRatio[visible_slides]) sliderRatio[visible_slides] = (visible_slides * slide_size - space) / size.y;
 					ratio = sliderRatio[visible_slides];
-					//console.log(ratio);
+					// console.log(ratio);
 					newSliderHeight = newSliderWidth / ratio;
 					djslider.css('height', newSliderHeight);
 				}
@@ -286,7 +287,6 @@ var DJSlider = {
 				slide_size = (newSliderWidth + space) / visible_slides;
 				slider_size = slides.length * slide_size + slides.length;
 				slider.css('width', slider_size);
-				
 				slides.css('width', slide_size - space);
 				slides.css('height', newSliderHeight);
 				
@@ -296,7 +296,6 @@ var DJSlider = {
 			}
 			
 			if(settings.show_buttons > 0 || settings.show_arrows > 0) {
-				
 				// get some vertical space for navigation
 				button_pos = $('#navigation' + settings.id).position().top;				
 				if(button_pos < 0) {					
@@ -491,10 +490,10 @@ var DJSlider = {
 		//else if (DocumentLoaded) sliderLoaded();
 		else $(window).load(sliderLoaded);
 		
-		responsive();
+		// responsive();
 		
-		$(window).on('resize', responsive);
 		$(window).on('load', responsive);
+		$(window).on('resize', responsive);
 	}
 	
 	

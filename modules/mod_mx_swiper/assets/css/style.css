@@ -687,6 +687,7 @@ button.swiper-pagination-bullet {
 .slider {
   width: 100%;
   height: 100vh;
+  min-height: 450px;
   position: relative;
   z-index: 1;
 }
@@ -886,9 +887,9 @@ button.swiper-pagination-bullet {
 
 .slider .swiper-container .swiper-slide .inner p {
   max-width: 40%;
-  font-size: 20px;
+  font-size: 24px;
   font-family: 'Josefin Sans', 'Droid Sans', sans-serif, Helvetica, Arial;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .slider .swiper-container .swiper-slide .inner.box-text-right .line-title,
@@ -1010,14 +1011,8 @@ button.swiper-pagination-bullet {
 /* RESPONSIVE MEDIUM  FIXES */
 
 @media only screen and (max-width: 1199px), only screen and (max-device-width: 1199px) {
-  .slider .swiper-container .swiper-slide .inner h2 {
-    font-size: 4em;
-  }
   .slider .swiper-container .swiper-slide .inner {
-    padding: 0 60px;
-  }
-  .slider .swiper-container .swiper-pagination-fraction {
-    left: 60px;
+    width: 100%;
   }
 }
 
@@ -1025,7 +1020,7 @@ button.swiper-pagination-bullet {
 
 @media only screen and (max-width: 991px), only screen and (max-device-width: 991px) {
   .slider .swiper-container .swiper-slide .inner h2 {
-    max-width: 70%;
+    max-width: 100%;
   }
   .slider .swiper-container .swiper-slide .inner p {
     max-width: 70%;
@@ -1047,22 +1042,10 @@ button.swiper-pagination-bullet {
   .slider .swiper-container .swiper-slide .inner {
     padding: 0 30px;
   }
-  .slider .swiper-container .swiper-slide .inner h2 {
-    max-width: 100%;
-    font-size: 3.5em;
-  }
-  .slider .swiper-container .swiper-slide .inner p {
-    max-width: 100%;
-  }
-  .slider .swiper-container .swiper-button-prev {
-    display: none;
-  }
-  .slider .swiper-container .swiper-button-line {
-    display: none;
-  }
-  .slider .swiper-container .swiper-button-next {
-    display: none;
-  }
+  .slider .swiper-container .swiper-slide .inner p,
+  .slider .swiper-container .swiper-button-prev,
+  .slider .swiper-container .swiper-button-line,
+  .slider .swiper-container .swiper-button-next,
   .slider .swiper-container .swiper-pagination-fraction {
     display: none;
   }
