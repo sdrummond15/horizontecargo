@@ -27,6 +27,8 @@
     color: #FFF;
     margin: 0;
     display: table;
+    max-width: 70%;
+    text-align: right;
 }
 
 @media screen and (max-width: 1200px) {

@@ -1563,7 +1563,7 @@ a.feed-link {
 
 .footer {
     width: 1170px;
-    display: table;
+    display: block;
     margin: auto;
 }
 
@@ -2371,10 +2371,14 @@ a.readmore-link-c {
     margin-bottom: 0;
 }
 
+/** Menu Responsive **/
+
 .gotomenu {
+    display: none;
+    position: absolute;
     visibility: hidden;
     right: 30px;
-    bottom: 0;
+    bottom: 1px;
 }
 
 #gotomenu {
@@ -2394,7 +2398,7 @@ a.readmore-link-c {
 }
 
 .menuresp {
-    visibility: hidden;
+    display: none;
     width: 100%;
     overflow-y: auto;
 }
@@ -2407,33 +2411,76 @@ a.readmore-link-c {
     display: block;
 }
 
+.menuresp ul ul {
+    margin: 0;
+    left: 0;
+    position: relative;
+    padding: 0;
+    display: none;
+}
+
+.menuresp ul li {
+    width: 100%;
+    text-align: center;
+    transition: 300ms all;
+}
+
+.menuresp ul li:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.menuresp ul li img {
+    display: none;
+}
+
+.menuresp ul li button {
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.menuresp ul li button:focus {
+    outline: none;
+}
+
+.menuresp ul li button i {
+    line-height: 24px;
+    width: 24px;
+}
+
+.menuresp li.active a, .menuresp li.active span {
+    color: #FFF;
+    font-weight: 600;
+}
+
 .menuresp a, .menuresp span {
     text-align: center;
     color: #FFF;
     font-family: 'Catamaran';
+    font-weight: 500;
     font-size: 18px;
     text-decoration: none;
     margin: 0 0 3px 0;
     padding: 5px 0;
     width: 100%;
     display: table;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
-.menuresp a:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
+.menuresp ul ul a {
+    width: 100%;
 }
 
-.menuresp li.active a, .menuresp li.active a:hover {
-    color: #fff;
-    text-decoration: none;
-    border: 0;
-    border-bottom: 1px #FFF solid;
-    font-weight: 500;
+.menuresp ul ul a span, .menuresp span span {
+    padding: 0;
 }
 
-.menuresp a img {
-    display: none;
+.menuresp a:hover, .menuresp span:hover, .menuresp li.active ul li a:hover {
+    text-decoration: none !important;
+    background-color: transparent;
 }
 
 .color-grey {
@@ -2482,6 +2529,27 @@ a.readmore-link-c {
     display: none;
 }
 
+.custom-rastrear {
+    text-align: center;
+}
+
+.custom-rastrear a:hover {
+    text-shadow: 0 0 8px rgba(131, 69, 0, 0.9);
+}
+
+.custom-rastrear h3 a {
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+.custom-rastrear img {
+    width: 120px;
+}
+
+.custom-rastrear:hover img {
+    transform: scale(1.02);
+}
+
 @media screen and (max-width:1200px) {
     #contact .contact>div, #header, #content-menu_wrap, #box_placeholder, .footer, .copyrightint {
         width: 96%;
@@ -2519,14 +2587,8 @@ a.readmore-link-c {
         display: none;
     }
     .gotomenu {
+        display: block;
         visibility: visible;
-        position: absolute;
-        display: table;
-    }
-    #gotomenu i {
-        font-size: 24px;
-        color: #fff;
-        vertical-align: text-bottom;
     }
     .item-page-home p {
         font-size: 20px;
@@ -2556,8 +2618,11 @@ a.readmore-link-c {
     li {
         font-size: 16px;
     }
+    #logo {
+        padding: 10px 0;
+    }
     #logo a img {
-        max-width: 90%;
+        width: 320px;
     }
     .item-page-home .img-fulltext-right {
         float: none;
@@ -2575,9 +2640,8 @@ a.readmore-link-c {
         width: 250px;
         height: auto;
     }
-    #box1, #box2, #box3, #box4 {
+    #box1, #box2, #box3 {
         width: 100%;
-        margin: 0;
     }
     .conheca {
         display: table;
@@ -2613,7 +2677,7 @@ a.readmore-link-c {
     .customcabecalho a span {
         display: none;
     }
-    .menuresp a {
+    .menuresp a, .menuresp span {
         font-size: 16px;
     }
     .custom-banner h1 {
@@ -2666,5 +2730,56 @@ a.readmore-link-c {
     }
     .contact-form input, .contact-form textarea {
         font-size: 16px;
+    }
+    .img-fulltext-right, .img-intro-right{
+        float: none;
+        margin: 0 auto 10px auto;
+        display: table;
+    }
+    .contact-form fieldset {
+        width: calc(100% - 20px);
+        float: none;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #logo {
+        padding: 15px 0 0 0;
+    }
+    #logo a img {
+        width: 240px;
+    }
+    #gotomenu {
+        padding: 1px 6px;
+        line-height: 0.8;
+    }
+    #gotomenu i {
+        font-size: 20px;
+    }
+    .copyrightint {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    #logo {
+        width: 100%;
+        padding: 8px 0;
+    }
+    #logo a {
+        margin: auto;
+    }
+    .menutop {
+        width: 100%;
+    }
+    #search_wrap {
+        width: auto;
+        float: left;
+    }
+    .copyrightint {
+        font-size: 10px;
+    }
+    .sd img {
+        width: 14px;
     }
 }

@@ -91,7 +91,7 @@
 
 @media screen and (max-width: 1024px) {
     #services .service {
-        width: calc(50% - 20px);
+        width: calc(33.33% - 20px);
         margin: 0 10px 30px 10px;
     }
 }
@@ -100,20 +100,28 @@
     #modservices {
         margin-bottom: 10px;
     }
+    #services {
+        background-image: none;
+        padding: 40px 0;
+    }
     #services .service {
         width: calc(50% - 10px);
         margin: 0 5px 20px 5px;
     }
-    #services .service {
-        width: 100%;
-        max-width: 350px;
-        margin: 0 auto 20px auto;
-        float: none;
+    #services .service .item-service a {
+        padding: 0;
+    }
+    #services .service .item-service a.img-service img {
+        transform: scale(0.8);
+    }
+    #services .service .item-service h1 a{
+        font-size: 22px;
     }
 }
 
 @media screen and (max-width: 480px) {
     #services .service {
-        max-width: 280px;
+        margin: 0 0 20px 0;
+        width: 100%;
     }
 }

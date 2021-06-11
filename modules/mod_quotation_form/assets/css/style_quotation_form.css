@@ -135,3 +135,16 @@ div.enviado h1 {
     text-align: center;
     margin: 40px 0 10px 0;
 }
+
+@media screen and (max-width: 768px) {
+    #quotation .quotation>div {
+        width: 96%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #quotation fieldset {
+        width: calc(100% - 20px);
+        float: none;
+    }
+}

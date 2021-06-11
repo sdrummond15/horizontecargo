@@ -22,7 +22,7 @@
 }
 
 #contact-social-footer a:hover, #contact-social-footer p a:hover {
-    color: #a1c9e1;
+    text-shadow: 0 0 8px rgba(131,69,0,0.9);
 }
 
 #contact-social-footer .phone, #contact-social-footer .email {
