@@ -2740,6 +2740,15 @@ a.readmore-link-c {
         width: calc(100% - 20px);
         float: none;
     }
+    #box_placeholder {
+        margin: 40px auto;
+    }
+    .moduletable-contato-footer h3 {
+        font-size: 24px;
+    }
+    #box1, #box2, #box3 {
+        margin-bottom: 30px;
+    }
 }
 
 @media screen and (max-width:600px) {
